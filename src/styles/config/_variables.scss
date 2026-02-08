@@ -1,0 +1,131 @@
+:root {
+  /* Colors Primary */
+  --color-primary: #0B3F6B;
+  /* Indigo Blue */
+  --color-primary-light:
+    color-mix(in srgb, var(--color-primary) 85%, white);
+  /* Light Indigo Blue */
+
+  --color-secondary: #E4B343;
+  /* Market Gold */
+  --color-secondary-dark:
+    color-mix(in srgb, var(--color-secondary) 85%, black);
+  /* Dark Gold */
+
+  --color-accent: #2E6B65;
+  /* Caribbean Current */
+  --color-accent-light:
+    color-mix(in srgb, var(--color-accent) 85%, white);
+  /* Light Caribbean Current */
+
+  --color-danger: #F06543;
+  /* Tomato */
+
+  --color-white: #ffffff;
+
+  /* Color Extra */
+  --color-sky: #5096B3;
+  /* Sky Blue */
+  --color-earth: #AE7650;
+  /* Earth Brown */
+
+  /* Neutral Colors */
+  --color-blue-50: #fbfdfe;
+  --color-blue-100: #f1f3f7;
+  --color-blue-200: #eaeef4;
+  --color-blue-300: #e1e6ee;
+  --color-blue-400: #dbee1eb;
+  --color-blue-500: #d2d9ec;
+  --color-blue-600: #bfc5d1;
+  --color-blue-700: #959ea3;
+  --color-blue-800: #74777f;
+  --color-blue-900: #585b61;
+
+  /* Gradients */
+  --gradient-teal-top: linear-gradient(180deg,
+      var(--color-accent) 0%,
+      color-mix(in srgb, var(--color-accent) 0%, var(--color-primary) 100%) 100%);
+
+  --gradient-teal-bottom: linear-gradient(0,
+      var(--color-accent) 0%,
+      color-mix(in srgb, var(--color-accent) 0%, var(--color-primary) 100%) 100%);
+
+  /* Typography - Font Families */
+  --font-base: "Hind", system-ui, -apple-system, sans-serif;
+  --font-heading: "Baskervville", Georgia, serif;
+
+  /* Typography - Font Sizes (1rem = 10px) */
+  --font-s-64: 6.4rem;
+  /* H1 - 64px */
+  --font-s-56: 5.6rem;
+  /* H2 - 56px */
+  --font-s-48: 4.8rem;
+  /* H3 - 48px */
+  --font-s-40: 4rem;
+  /* H4 - 40px */
+  --font-s-32: 3.2rem;
+  /* H5 - 32px */
+  --font-s-28: 2.8rem;
+  /* H6 - 28px */
+  --font-s-24: 2.4rem;
+  /* H7 - 24px */
+  --font-s-20: 2rem;
+  /* S1 - 20px */
+  --font-s-18: 1.8rem;
+  /* S2 - 18px */
+  --font-s-16: 1.6rem;
+  /* S3/B1/B2 - 16px */
+  --font-s-14: 1.4rem;
+  /* B3/B4 - 14px */
+  --font-s-12: 1.2rem;
+  /* C1/C2/Label - 12px */
+  --font-s-10: 1rem;
+  /* C3 - 10px */
+
+  /* Typography - Line Heights (1rem = 10px) */
+  --line-h-78: 7.8rem;
+  /* 78px */
+  --line-h-66: 6.6rem;
+  /* 66px */
+  --line-h-58: 5.8rem;
+  /* 58px */
+  --line-h-48: 4.8rem;
+  /* 48px */
+  --line-h-38: 3.8rem;
+  /* 38px */
+  --line-h-34: 3.4rem;
+  /* 34px */
+  --line-h-28: 2.8rem;
+  /* 28px */
+  --line-h-24: 2.4rem;
+  /* 24px */
+  --line-h-20: 2rem;
+  /* 20px */
+  --line-h-16: 1.6rem;
+  /* 16px */
+  --line-h-14: 1.4rem;
+  /* 14px */
+
+  /* Typography - Font Weights */
+  --font-w-regular: 400;
+  --font-w-medium: 500;
+  --font-w-semibold: 600;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Radius */
+  --radius-sm: 0.4rem;
+  /* 4px */
+  --radius-md: 0.6rem;
+  /* 6px */
+  --radius-lg: 1rem;
+  /* 10px */
+
+  /* Layout */
+  --container-width: 1200px;
+}

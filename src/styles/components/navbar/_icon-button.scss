@@ -1,0 +1,36 @@
+.c-header-actions {
+  /* background-color: #f00; */
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.c-icon-button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  /* border: 1px solid var(--color-blue-700); */
+}
+
+.c-icon-button img {
+  --size-icon: 2.4rem;
+  width: var(--size-icon);
+  height: var(--size-icon);
+}
+
+.c-icon-dropdown{
+  
+}
+.c-icon-dropdown img {
+  display: inline-block;
+  transform: rotate(180deg);
+  margin: 0 .5rem;
+  width: 1rem;
+  transition: transform 300ms ease;
+}
+
+.c-icon-dropdown:hover img {
+  transform: rotate(0);
+}

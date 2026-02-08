@@ -1,0 +1,35 @@
+
+.c-nav {
+  /* background-color: tomato; */
+}
+
+.c-nav__list {
+  display: flex;
+  gap: calc(var(--space-lg) * 2);
+  flex-wrap: wrap;
+}
+
+.c-nav__link {
+  font-size: var(--font-s-16);      /* 16px */
+  color: var(--color-blue-600);
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.c-nav__link--active {
+  color: var(--color-white);
+  /* font-weight: var(--font-w-medium); */
+}
+
+.c-nav__link:hover {
+  color: var(--color-white);
+  /* font-weight: var(--font-w-medium); */
+}
+
+.divisor {
+  width: 1px;
+  height: 3rem;
+  background-color: var(--color-blue-700);
+  margin: 0 var(--space-lg);
+  display: inline-block;
+}

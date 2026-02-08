@@ -1,0 +1,11 @@
+.badge {
+  background-color: var(--color-danger, #ff5733);
+  color: var(--color-white, #ffffff);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  top: -0.2rem;
+}

@@ -1,0 +1,54 @@
+// Main SCSS file that imports all configuration and component styles
+@use 'config/reset';
+@use 'config/fonts';
+@use 'config/variables';
+@use 'config/typography';
+@use 'config/utilities';
+
+/* =========================================
+    Layout Styles
+   ========================================= */
+@use 'layouts/grid';
+@use 'layouts/header';
+@use 'layouts/footer';
+@use 'layouts/sidebar';
+
+/* =========================================
+   Component Styles
+   ========================================= */
+
+@use 'components/button';
+@use 'components/card';
+@use 'components/form';
+@use 'components/modal';
+@use 'components/pagination';
+// Navbar components
+@use 'components/navbar/nav';
+@use 'components/navbar/logo';
+@use 'components/navbar/icon-button';
+@use 'components/navbar/dropdown';
+@use 'components/navbar/badge';
+// FOOTER components
+@use 'components/footer/footer-link';
+
+/* =========================================
+   Block Styles
+   ========================================= */
+@use 'blocks/hero';
+@use 'blocks/feature-list';
+@use 'blocks/cta';
+@use 'blocks/newsletter';
+
+/* =========================================
+    Pages Styles
+   ========================================= */
+@use 'pages/home';
+@use 'pages/blog';
+@use 'pages/single-post';
+@use 'pages/archive';
+@use 'pages/shop';
+
+/* =========================================
+   WordPress Specific Styles
+   ========================================= */
+@use 'vendor/wordpress';

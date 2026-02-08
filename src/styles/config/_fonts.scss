@@ -1,0 +1,44 @@
+/* =========================================
+   Font Face Declarations
+   ========================================= */
+
+/* Baskervville - Serif Font */
+@font-face {
+  font-family: 'Baskervville';
+  src: url('/fonts/Baskervville/Baskervville-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baskervville';
+  src: url('/fonts/Baskervville/Baskervville-Medium.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hind - Sans Serif Font */
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-SemiBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

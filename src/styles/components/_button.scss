@@ -1,0 +1,146 @@
+
+/* Base Button */
+.c-button,
+.c-button-sm,
+.c-button-lg,
+.c-button-ghost,
+.c-button-ghost-sm,
+.c-button-ghost-lg {
+  min-height: 5.6rem;
+  border-radius: var(--radius-sm); 
+  padding: 2.2rem 2.4rem;
+  font-size: var(--font-s-16);
+  font-weight: var(--font-w-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: background-color 200ms ease,
+              color 200ms ease, 
+              border-color 200ms ease;
+}
+
+.c-button-sm,
+.c-button-ghost-sm {
+  font-size: var(--font-s-14);
+}
+
+.c-button-lg,
+.c-button-ghost-lg {
+  font-size: var(--font-s-18);
+}
+
+/* Solid Button */
+.c-button--gold{
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.c-button--primary{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.c-button--accent{
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* ++++++++++ Hover Effects Solid ++++++++++ */
+/* Base */
+.c-button:hover {
+  background-color: var(--color-blue-200);
+}
+
+/* Solid */
+.c-button--gold:hover{
+  background-color: var(--color-secondary-dark);
+  color: var(--color-primary);
+}
+
+.c-button--primary:hover{
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+.c-button--accent:hover{
+  background-color: var(--color-accent-light);
+  color: var(--color-white);
+}
+
+
+/* +++++++++ Ghost Button +++++++++ */
+
+.c-button-ghost,
+.c-button-ghost-sm,
+.c-button-ghost-lg {
+  background-color: transparent;
+  border: 0.2rem solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-button-ghost--gold{
+  color: var(--color-secondary);
+}
+
+.c-button-ghost--primary{
+  color: var(--color-primary);
+}
+
+.c-button-ghost--accent{
+  color: var(--color-accent);
+}
+
+
+/* ++++++++++ Hover Effects Ghost ++++++++++ */
+/* Ghost */
+.c-button-ghost--gold:hover{
+  color: var(--color-secondary-dark);
+}
+
+.c-button-ghost--primary:hover{
+  color: var(--color-primary-light);
+}
+
+.c-button-ghost--accent:hover{
+  color: var(--color-accent-light);
+}
+
+/* Ghost Button Animation */
+/* .c-button-ghost::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--color-secondary);
+  top: 0;
+  left: -2rem;
+  width: 0;
+  height: 100%;
+  transition: transform 300ms ease,
+              width 300ms ease,
+              left 300ms ease;
+  z-index: -1;
+  transform: skew(20deg);
+}
+.c-button-ghost:hover::before {
+  width: 150%;
+} */
+
+
+/* Disabled Button */
+.c-button:disabled,
+.c-button-sm:disabled,
+.c-button-lg:disabled {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-600);
+  border-color: var(--color-blue-100);
+  cursor: not-allowed;
+}
+
+.c-button-ghost:disabled,
+.c-button-ghost-sm:disabled,
+.c-button-ghost-lg:disabled {
+  color: var(--color-blue-600);
+  cursor: not-allowed;
+}

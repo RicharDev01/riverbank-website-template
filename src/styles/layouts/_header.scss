@@ -1,0 +1,10 @@
+.l-header {
+  background-color: var(--color-primary);
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10rem;
+}
