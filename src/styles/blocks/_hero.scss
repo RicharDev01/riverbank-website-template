@@ -1,0 +1,141 @@
+// importamos los mixins para las media queries
+@use "../config/mixins";
+
+.b-hero-container {
+  position: relative;
+  height: calc(95vh - 10rem);
+
+  // Para tables de apple
+  @media screen and (max-width: 1024px) and (min-height: 1100px) {
+    height: calc(50vh - 10rem);
+  }
+
+  @include mixins.break(small) {
+    height: calc(85vh - 10rem);
+  }
+
+
+}
+
+.b-hero__content {
+  //  padding 
+  --gap-padding-hero: 10rem;
+  position: relative;
+  z-index: 1;
+  padding-top: var(--gap-padding-hero);
+  padding-bottom: var(--gap-padding-hero);
+
+  // para pantallas menores a 1024px, el grid se adapta a una sola columna y el padding-top se reduce a 5rem
+  @include mixins.break(large) {
+    --gap-padding-hero: 6rem;
+  }
+
+  @include mixins.break(small) {
+    --gap-padding-hero: 2rem;
+  }
+
+}
+
+.b-hero__content--box {
+
+  h1.title-1 {
+
+    margin: 4rem 0;
+    width: 70%;
+
+    @include mixins.break(large) {
+      width: 100%;
+      font-size: var(--font-s-48);
+      /* 48px */
+      line-height: var(--line-s-48);
+      /* 48px */
+      margin: 3rem 0;
+    }
+
+    // para pantallas menores a 1024px, el font-size se adapta a 24px
+    @include mixins.break(small) {
+      font-size: var(--font-s-40);
+      /* 40px */
+      line-height: var(--line-s-48);
+      /* 48px */
+      margin: 2rem 0;
+    }
+
+  }
+
+  p {
+    margin-bottom: 3rem;
+    width: 70%;
+
+    @include mixins.break(medium) {
+      font-size: var(--font-s-18);
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  p.title-brand {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    width: 100%;
+  }
+
+}
+
+.b-hero__ctas {
+  display: flex;
+  gap: 2rem;
+  align-items: start;
+
+  @include mixins.break(medium) {
+
+    .c-button-lg,
+    .c-button-ghost-lg {
+      min-height: 4.8rem;
+      padding: 1.6rem 2rem;
+      font-size: var(--font-s-14);
+    }
+  }
+
+  @include mixins.break(small) {
+    flex-direction: column;
+
+    .c-button-lg,
+    .c-button-ghost-lg {
+      min-height: 4.8rem;
+      padding: 1.6rem 2rem;
+      font-size: var(--font-s-14);
+    }
+  }
+
+}
+
+.b-hero__image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow-x: hidden;
+
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+
+  @include mixins.break(medium) {
+    img {
+      height: 200px;
+    }
+
+  }
+
+  @include mixins.break(small) {
+    img {
+      height: 200px;
+    }
+
+  }
+
+}

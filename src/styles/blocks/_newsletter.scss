@@ -1,6 +1,6 @@
 .b-newsletter-container {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 4rem;
 }
 
 .b-newsletter-container h2 {
@@ -20,9 +20,11 @@
 
 /* Formulario */
 .b-newsletter-form {
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  // position: fixed;
+
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.06),

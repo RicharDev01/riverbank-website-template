@@ -1,0 +1,48 @@
+// Mixin para generar clases de tipografía
+@use "sass:map";
+
+@mixin type-classes($prefix, $map, $weight: null) {
+
+  @each $key, $data in $map {
+
+    .#{$prefix}-#{$key} {
+
+      font-size: map.get($data, size);
+      line-height: map.get($data, line);
+
+      @if $weight != null {
+        font-weight: $weight;
+      } @else if map.has-key($data, weight) {
+        font-weight: map.get($data, weight);
+      }
+
+    } // fin selector
+
+  } // fin each
+
+} // fin mixin
+
+// Mixin para crear breackpoints de forma dinámica
+$breakpoints: (
+    xsmall: 375px,
+    small: 430px,
+    medium: 800px,
+    large: 1024px,
+    xlarge: 1200px
+);
+@mixin break($breakpoint) {
+
+  @if map.has-key( $breakpoints, $breakpoint ) {
+
+    @media screen and ( max-width: map.get( $breakpoints, $breakpoint ) ) {
+        @content;
+    } 
+
+  } @else {
+    @media screen and ( max-width: $breakpoint ){
+        @content; 
+    }
+
+  } // fin IF
+
+} // fin mixin

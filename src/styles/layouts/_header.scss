@@ -1,10 +1,95 @@
-.l-header {
-  background-color: var(--color-primary);
-}
+
+@use '../config/mixins';
 
 .l-header__inner {
+  height: 10rem;
+  max-height: 10rem;
+
+  grid-template-columns: 1fr 6fr 1fr ;
+  align-items: center;
+
+  // 1024px
+  @include mixins.break(large)  {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+}
+
+.c-header-actions {
+  padding: var(--space-sm) var(--space-md);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 10rem;
+  justify-content: center;
+
+  @include mixins.break(large) {
+    justify-content: flex-end;
+    .c-icon-button:nth-child(1), .divisor {
+      display: none;
+    }
+  }
+
+}
+.divisor {
+  width: 1px;
+  height: 3rem;
+  background-color: var(--color-blue-700);
+  margin: 0 var(--space-lg);
+  display: inline-block;
+}
+
+/* =========================================
+   MENU HAMBURGER
+   ========================================= */
+
+.c-menu-hamburger {
+  display: none;
+
+  @include mixins.break(large) {
+    display: block;
+  }
+}
+
+.c-menu-hamburger__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover .c-hamburger-line {
+    background-color: var(--color-secondary);
+  }
+}
+
+.c-hamburger-line {
+  width: 2.4rem;
+  height: 0.2rem;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+// Estado activo cuando el menú está abierto
+.c-menu-hamburger__button.is-active {
+  .c-hamburger-line:nth-child(1) {
+    transform: translateY(0.8rem) rotate(45deg);
+  }
+
+  .c-hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .c-hamburger-line:nth-child(3) {
+    transform: translateY(-0.8rem) rotate(-45deg);
+  }
 }

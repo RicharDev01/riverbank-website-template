@@ -1,4 +1,13 @@
 .l-footer {
   background-image: var(--gradient-teal-bottom);
-  min-height: 100vh;
+  height: 100vh;
+  // border: 0.2rem solid white;
+  place-content: center;
+}
+
+.l-footer-box {
+  grid-template-rows: 2fr 4fr;
+  row-gap: 9rem;
+  align-content: center;
+  // border: 0.2rem solid red;
 }

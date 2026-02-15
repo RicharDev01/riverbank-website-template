@@ -11,6 +11,13 @@
   padding: 0;
 }
 
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -27,6 +34,20 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--color-secondary) transparent;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+html::-webkit-scrollbar-button {
+  // display: none;
 }
 
 /* Sections

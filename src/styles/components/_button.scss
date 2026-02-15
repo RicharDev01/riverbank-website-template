@@ -1,49 +1,63 @@
 
+@use "sass:map";
+
 /* Base Button */
-.c-button,
-.c-button-sm,
-.c-button-lg,
-.c-button-ghost,
-.c-button-ghost-sm,
-.c-button-ghost-lg {
+%button-base {
   min-height: 5.6rem;
-  border-radius: var(--radius-sm); 
+  border-radius: var(--radius-sm);
   padding: 2.2rem 2.4rem;
   font-size: var(--font-s-16);
   font-weight: var(--font-w-semibold);
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  transition: background-color 200ms ease,
-              color 200ms ease, 
-              border-color 200ms ease;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+  border: none;
+  cursor: pointer;
+}
+
+%button-ghost-base {
+  background-color: transparent;
+  border: 0.2rem solid;
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin button-size($size) {
+  font-size: $size;
+}
+
+.c-button,
+.c-button-sm,
+.c-button-lg,
+.c-button-ghost,
+.c-button-ghost-sm,
+.c-button-ghost-lg {
+  @extend %button-base;
 }
 
 .c-button-sm,
 .c-button-ghost-sm {
-  font-size: var(--font-s-14);
+  @include button-size(var(--font-s-14));
 }
 
 .c-button-lg,
 .c-button-ghost-lg {
-  font-size: var(--font-s-18);
+  @include button-size(var(--font-s-18));
 }
 
 /* Solid Button */
-.c-button--gold{
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-}
+$solid-variants: (
+  "gold": (bg: var(--color-secondary), color: var(--color-primary), hover: var(--color-secondary-dark)),
+  primary: (bg: var(--color-primary), color: var(--color-white), hover: var(--color-primary-light)),
+  accent: (bg: var(--color-accent), color: var(--color-white), hover: var(--color-accent-light))
+);
 
-.c-button--primary{
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.c-button--accent{
-  background-color: var(--color-accent);
-  color: var(--color-white);
+@each $name, $vars in $solid-variants {
+  .c-button--#{$name} {
+    background-color: map.get($vars, bg);
+    color: map.get($vars, color);
+  }
 }
 
 /* ++++++++++ Hover Effects Solid ++++++++++ */
@@ -53,19 +67,11 @@
 }
 
 /* Solid */
-.c-button--gold:hover{
-  background-color: var(--color-secondary-dark);
-  color: var(--color-primary);
-}
-
-.c-button--primary:hover{
-  background-color: var(--color-primary-light);
-  color: var(--color-white);
-}
-
-.c-button--accent:hover{
-  background-color: var(--color-accent-light);
-  color: var(--color-white);
+@each $name, $vars in $solid-variants {
+  .c-button--#{$name}:hover {
+    background-color: map.get($vars, hover);
+    color: map.get($vars, color);
+  }
 }
 
 
@@ -74,37 +80,28 @@
 .c-button-ghost,
 .c-button-ghost-sm,
 .c-button-ghost-lg {
-  background-color: transparent;
-  border: 0.2rem solid;
-  position: relative;
-  overflow: hidden;
+  @extend %button-ghost-base;
 }
 
-.c-button-ghost--gold{
-  color: var(--color-secondary);
-}
+$ghost-variants: (
+  "gold": (color: var(--color-secondary), hover: var(--color-secondary-dark)),
+  primary: (color: var(--color-primary), hover: var(--color-primary-light)),
+  accent: (color: var(--color-accent), hover: var(--color-accent-light))
+);
 
-.c-button-ghost--primary{
-  color: var(--color-primary);
-}
-
-.c-button-ghost--accent{
-  color: var(--color-accent);
+@each $name, $vars in $ghost-variants {
+  .c-button-ghost--#{$name} {
+    color: map.get($vars, color);
+  }
 }
 
 
 /* ++++++++++ Hover Effects Ghost ++++++++++ */
 /* Ghost */
-.c-button-ghost--gold:hover{
-  color: var(--color-secondary-dark);
-}
-
-.c-button-ghost--primary:hover{
-  color: var(--color-primary-light);
-}
-
-.c-button-ghost--accent:hover{
-  color: var(--color-accent-light);
+@each $name, $vars in $ghost-variants {
+  .c-button-ghost--#{$name}:hover {
+    color: map.get($vars, hover);
+  }
 }
 
 /* Ghost Button Animation */

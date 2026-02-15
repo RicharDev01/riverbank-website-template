@@ -3,22 +3,7 @@
    Sistema: 1rem = 10px (html font-size: 62.5%)
    ========================================= */
 
-// Mixin para generar clases de tipografía
-@use "sass:map";
-
-@mixin type-classes($prefix, $map, $weight: null) {
-  @each $key, $data in $map {
-    .#{$prefix}-#{$key} {
-      font-size: map.get($data, size);
-      line-height: map.get($data, line);
-      @if $weight != null {
-        font-weight: $weight;
-      } @else if map.has-key($data, weight) {
-        font-weight: map.get($data, weight);
-      }
-    }
-  }
-}
+@use "mixins";
 
 /* Shared Properties */
 [class^="title-"] {
@@ -37,16 +22,16 @@
 
 /* Headings (Baskervville) */
 $typography-titles: (
-  1: (size: var(--font-s-64), line: var(--line-h-78), weight: var(--font-w-regular)),
-  2: (size: var(--font-s-56), line: var(--line-h-66), weight: var(--font-w-regular)),
-  3: (size: var(--font-s-48), line: var(--line-h-58), weight: var(--font-w-regular)),
-  4: (size: var(--font-s-40), line: var(--line-h-48), weight: var(--font-w-regular)),
+  1: (size: var(--font-s-64), line: var(--line-h-78), weight: var(--font-w-semibold)),
+  2: (size: var(--font-s-56), line: var(--line-h-66), weight: var(--font-w-semibold)),
+  3: (size: var(--font-s-48), line: var(--line-h-58), weight: var(--font-w-semibold)),
+  4: (size: var(--font-s-40), line: var(--line-h-48), weight: var(--font-w-semibold)),
   5: (size: var(--font-s-32), line: var(--line-h-38), weight: var(--font-w-medium)),
   6: (size: var(--font-s-28), line: var(--line-h-34), weight: var(--font-w-medium)),
   7: (size: var(--font-s-24), line: var(--line-h-28), weight: var(--font-w-medium))
 );
 
-@include type-classes("title", $typography-titles);
+@include mixins.type-classes("title", $typography-titles);
 
 /* Subtitles (Hind) */
 $typography-subtitles: (
@@ -55,7 +40,7 @@ $typography-subtitles: (
   3: (size: var(--font-s-16), line: var(--line-h-24))
 );
 
-@include type-classes("subtitle", $typography-subtitles, var(--font-w-medium));
+@include mixins.type-classes("subtitle", $typography-subtitles, var(--font-w-medium));
 
 /* Body Text (Hind) */
 $typography-bodies: (
@@ -65,7 +50,7 @@ $typography-bodies: (
   4: (size: var(--font-s-14), line: var(--line-h-20), weight: var(--font-w-medium))
 );
 
-@include type-classes("body", $typography-bodies);
+@include mixins.type-classes("body", $typography-bodies);
 
 /* Captions (Hind) */
 $typography-captions: (
@@ -74,7 +59,7 @@ $typography-captions: (
   3: (size: var(--font-s-10), line: var(--line-h-14), weight: var(--font-w-medium))
 );
 
-@include type-classes("caption", $typography-captions);
+@include mixins.type-classes("caption", $typography-captions);
 
 /* Label (Hind) */
 .label-text {
@@ -95,7 +80,7 @@ $typography-buttons: (
   5: (size: var(--font-s-10), line: 1.2rem)
 );
 
-@include type-classes("button-text", $typography-buttons);
+@include mixins.type-classes("button-text", $typography-buttons);
 
 /* =========================================
    Utility Classes
@@ -123,4 +108,18 @@ $utility-colors: (
   .bg-#{$name} { background-color: $value; }
   .text-#{$name} { color: $value; }
 }
+
+// Utilidad de las fuentes
+.font-titles { font-family: var(--font-heading); }
+.font-texts { font-family: var(--font-base); }
+// centrar textos
+.text-center { text-align: center; }
+// peso de fuentes
+.fw-regular { font-weight: var(--font-w-regular); }
+.fw-medium { font-weight: var(--font-w-medium); }
+.fw-semibold { font-weight: var(--font-w-semibold); }
+
+// Clase utilitaria para Grids
+.l-grid { display: grid; }
+
 

@@ -1,3 +1,74 @@
 body {
   background-color: var(--color-primary);
 }
+
+// Primera sección despues del Hero
+.s-grid-info {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 80vh;
+  border-top: 1px solid var(--color-blue-600);
+  border-bottom: 1px solid var(--color-blue-600);
+}
+
+.s-grid-info-1 {
+  grid-row: 1 / span 2;
+  width: 75%;
+  place-self: center;
+
+  h2.title-1 { margin-bottom: 3rem; }
+
+
+}
+
+.s-grid-info-2 {
+  grid-row: 1 / span 3;
+  border-left: 1px solid var(--color-blue-600);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  width: 100%;
+  background-color: color-mix(in srgb, var(--color-primary) 85%, black 15%);
+
+  h2.title-3 { margin-bottom: 3rem; }
+
+  p.subtitle-1 {
+    position: relative;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 20%;
+      height: 0.2rem;
+      background-color: var(--color-danger);
+      position: absolute;
+      top: -2rem;
+    }
+  }
+
+  .mark-text { color:var(--color-danger); }
+
+}
+
+.s-grid-info-image {
+  grid-row: span 1;
+
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+/* =========================================
+   SECTION CARDS
+========================================= */
+.s-cards-container {
+  border: 1px solid red;
+  height: 100vh;
+
+  h2.title-1 {
+    margin-bottom: 6rem;
+    margin-top: 8rem;
+  }
+
+}

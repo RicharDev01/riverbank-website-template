@@ -1,7 +1,3 @@
-import './styles/main.scss'
 
-document.querySelector('#app').innerHTML = `
-  <h1 class="title">
-   Hello RiverBank!
-  </h1>
-`
+import './styles/main.scss'
+import './js/navbar/navbar.js'

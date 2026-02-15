@@ -1,11 +1,3 @@
-.c-header-actions {
-  /* background-color: #f00; */
-  padding: var(--space-sm) var(--space-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
 .c-icon-button {
   background-color: transparent;
@@ -20,9 +12,6 @@
   height: var(--size-icon);
 }
 
-.c-icon-dropdown{
-  
-}
 .c-icon-dropdown img {
   display: inline-block;
   transform: rotate(180deg);

@@ -1,4 +1,5 @@
 // Main SCSS file that imports all configuration and component styles
+@use 'config/mixins';
 @use 'config/reset';
 @use 'config/fonts';
 @use 'config/variables';
