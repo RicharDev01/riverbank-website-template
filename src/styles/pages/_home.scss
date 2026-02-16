@@ -134,12 +134,15 @@ body { background-color: var(--color-primary); }
    SECTION CARDS
 ========================================= */
 .s-cards-container {
-  border: 1px solid red;
-  height: 100vh;
+  min-height: 100vh;
 
   h2.title-1 {
     margin-bottom: 6rem;
     margin-top: 8rem;
+    @include mixins.break(medium) {
+      font-size: var(--font-s-32);
+      line-height: var(--line-h-34);
+    }
   }
 
 }

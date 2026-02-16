@@ -2,32 +2,31 @@
 
 .l-container {
   /* Desktop-first container: 1440px viewport with 80px gutters */
-  // Para pantallas menores a 1280px, el container se adapta al 100% del ancho con un padding de 80px
   --container-max: 1280px;
-  --container-pad: 80px;
+  --container-pad: 3.2rem;
 
   width: 100%;
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--container-pad);
-  padding-right: var(--container-pad);
 
 
   // Para pantallas menores a 1024px, el container se adapta al 100% del ancho con un padding de 64px 
   @include mixins.break(large) {
     --container-max: 1024px;
-    --container-pad: 64px;
+    padding-left: var(--container-pad);
+    padding-right: var(--container-pad);
   }
   // Para pantallas menores a 800px, el container se adapta al 100% del ancho con un padding de 40px
   @include mixins.break(medium) {
     --container-max: 800px;
-    --container-pad: 40px;
   }
 
   // Para pantallas menores a 400px, el container se adapta al 100% del ancho con un padding de 24px
   @include mixins.break(small) {
     --container-max: 100%;
-    --container-pad: 24px;
+    --container-pad: 2rem;
+    padding-left: var(--container-pad);
+    padding-right: var(--container-pad);
   }
 }

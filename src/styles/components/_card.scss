@@ -1,42 +1,69 @@
 @use "../config/variables";
 @use "../config/mixins";
+
 .s-cards-grid {
-  grid-template-columns: repeat(3, 1fr);
-  // border: 1px solid var(--color-blue-600);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
   margin-bottom: 8rem;
 
   @include mixins.break(large) {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    // padding: 3.2rem;
+  }
+
+  @include mixins.break(small) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
   }
   
 }
 
 .c-card {
-  width: 40rem; // 400px
-  height: 54rem; // 540px
+  width: 40rem;
+  min-height: 54rem;
   border-radius: var(--radius-lg);
   background-color: 
     color-mix(in srgb, var(--color-primary) 85%, black 15%);
   padding: 2.4rem;
-  justify-self: start;
 
-  &:nth-child(2) {
-    justify-self: center;
+
+  /* ======== laptop ======== */
+  @include mixins.break(large) {
+    width: 100%;
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .c-card-box-content {
+      width: 50%;
+    }
+
   }
 
-  &:nth-child(3) {
-    justify-self: end;
+  /* ======== mobile - volver a vertical ======== */
+  @include mixins.break(small) {
+    width: 33rem;
+    display: block;
+    flex-direction: column;
+    
+    .c-card-box-content { width: 100% }
   }
 
 }
 
 .c-card-image {
-  margin-bottom: 2rem;
-  // border: 1px solid var(--color-blue-600);
   text-align: center;
-  height: 21rem; // 210px
+  height: 21rem;
   display: grid;
   place-items: center;
+
+  img { width: 100% }
+
 }
 
 .c-card-title {
