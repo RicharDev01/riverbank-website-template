@@ -15,7 +15,6 @@ const dropdownTrigger = d.getElementById('c-nav__link--services');
 const dropdownMenu = d.getElementById('c-dropdown-mobile');
 const dropdownParent = d.getElementById('has-dropdown');
 
-console.table({ dropdownTrigger, dropdownMenu, dropdownParent });
 
 if (dropdownTrigger && dropdownMenu) {
   dropdownTrigger.addEventListener('click', (e) => {

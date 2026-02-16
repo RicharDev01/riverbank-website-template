@@ -10,7 +10,6 @@
 
   @include mixins.break(large) {
     flex-direction: column;
-    // padding: 3.2rem;
   }
 
   @include mixins.break(small) {
