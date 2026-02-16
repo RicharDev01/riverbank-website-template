@@ -3,15 +3,15 @@
 
 .b-hero-container {
   position: relative;
-  height: calc(95vh - 10rem);
+  min-height: calc(95vh - 10rem);
 
   // Para tables de apple
   @media screen and (max-width: 1024px) and (min-height: 1100px) {
-    height: calc(50vh - 10rem);
+    min-height: calc(50vh - 10rem);
   }
 
   @include mixins.break(small) {
-    height: calc(85vh - 10rem);
+    min-height: calc(85vh - 10rem);
   }
 
 

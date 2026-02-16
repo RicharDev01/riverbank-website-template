@@ -1,7 +1,8 @@
+@use "../config/mixins";
+
 .l-footer {
   background-image: var(--gradient-teal-bottom);
-  height: 100vh;
-  // border: 0.2rem solid white;
+  min-height: 100vh;
   place-content: center;
 }
 
@@ -9,5 +10,10 @@
   grid-template-rows: 2fr 4fr;
   row-gap: 9rem;
   align-content: center;
-  // border: 0.2rem solid red;
+
+  /* ======== tabletmobile ======== */
+  @include mixins.break(medium) {
+    row-gap: 4rem;
+  }
+
 }
