@@ -11,7 +11,7 @@
   overflow: hidden;
 
   /* ======== mobile ======== */
-  @include mixins.break(small) {
+  @include mixins.break(medium) {
     grid-template-columns: 1fr;
     border: none;
   }
@@ -44,7 +44,7 @@
   }
 
   /* ======== mobile ======== */
-  @include mixins.break(small) {
+  @include mixins.break(medium) {
 
     padding: 2rem 2rem 2rem 0;
     border: none;
@@ -131,4 +131,10 @@
       object-fit: contain;
     }
   }
+
+  @include mixins.break(medium){
+    border: 0.1rem solid var(--color-blue-700);
+    border-radius: 1rem;
+  }
+
 }

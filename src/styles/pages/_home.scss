@@ -1,7 +1,12 @@
-
 @use "../config/mixins";
 
-body { background-color: var(--color-primary); }
+body {
+  background-color: var(--color-primary);
+}
+
+sup {
+  font-size: var(--font-s-14);
+}
 
 // Primera sección despues del Hero
 .s-grid-info {
@@ -17,7 +22,7 @@ body { background-color: var(--color-primary); }
     grid-template-rows: 1fr 1fr 12rem;
     height: fit-content;
   }
-  
+
 
 }
 
@@ -44,17 +49,19 @@ body { background-color: var(--color-primary); }
   /* ======== laptop ======== */
   @include mixins.break(large) {
     width: 90%;
+
     .s-grid-info-1__title {
       font-size: var(--font-s-56); // 56px
       line-height: var(--line-h-58); // 58px
     }
   }
-  
+
   /* ======== mobile ======== */
   @include mixins.break(medium) {
     width: 100%;
     grid-row: 1 / span 1;
     padding: 3rem;
+
     .s-grid-info-1__title {
       font-size: var(--font-s-32);
       line-height: var(--line-h-34);
@@ -83,6 +90,7 @@ body { background-color: var(--color-primary); }
 
   .s-grid-info-2__content {
     position: relative;
+
     &::before {
       content: "";
       display: inline-block;
@@ -94,7 +102,9 @@ body { background-color: var(--color-primary); }
     }
   }
 
-  .mark-text { color:var(--color-danger); }
+  .mark-text {
+    color: var(--color-danger);
+  }
 
   /* ======== laptop ======== */
   @include mixins.break(large) {
@@ -140,10 +150,276 @@ body { background-color: var(--color-primary); }
   h2.title-1 {
     margin-bottom: 6rem;
     margin-top: 8rem;
+
     @include mixins.break(medium) {
       font-size: var(--font-s-32);
       line-height: var(--line-h-34);
     }
+  }
+
+}
+
+/* ================== HOW WE WORK SECTION ================== */
+.s-work {
+  min-height: 60rem;
+  padding: 8rem;
+  text-align: center;
+
+  .s-work__title {
+    font-size: var(--font-s-64);
+    line-height: var(--line-h-78);
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    font-weight: var(--font-w-regular);
+  }
+
+  .s-work__paragraph {
+    font-size: var(--font-s-20);
+    line-height: var(--line-h-28);
+    color: var(--color-blue-600);
+    margin-bottom: 5rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .s-work__subtitle {
+    font-family: var(--font-base);
+    font-size: var(--font-s-20);
+    line-height: var(--line-h-28);
+    color: var(--color-secondary);
+    margin-bottom: 5rem;
+    font-weight: var(--font-w-medium);
+    text-transform: uppercase;
+  }
+
+
+  /* ======== mobile ======== */
+  @include mixins.break(small) {
+    padding: 2rem;
+
+    .s-work__title {
+      font-size: var(--font-s-32);
+      line-height: var(--line-h-34);
+    }
+
+    .s-work__paragraph {
+      font-size: var(--font-s-16);
+      line-height: var(--line-h-24);
+    }
+
+    .s-work__engagements-item {
+      border-right: none;
+      border-bottom: 0.1rem solid var(--color-blue-700);
+    }
+
+    .s-work__paragraph {
+      width: 95%;
+    }
+
+  }
+
+}
+
+.s-work__engagements {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 10rem;
+
+  .s-work__engagements-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-s-28);
+    line-height: var(--line-h-34);
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    padding: 0 10rem;
+    border-right: 0.1rem solid var(--color-blue-700);
+
+    &:last-child { border-right: none }
+  }
+
+  /* ======== mobile ======== */
+  @include mixins.break(medium) {
+    flex-wrap: wrap;
+
+    .s-work__engagements-item {
+      width: 100%;
+      padding: 3.8rem 0;
+      border-right: none;
+      border-bottom: 0.1rem solid var(--color-blue-700);
+
+      &:last-child { border-bottom: none }
+    }
+  }
+
+}
+
+/* ================== SYSTEM SECTION ================== */
+.s-system {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 60rem;
+}
+
+.s-system__image-container {
+  flex-basis: 50%;
+  height: 100%;
+
+  .s-system__image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ======== mobile ======== */
+  @include mixins.break(medium) {
+    flex-basis: 100%;
+  }
+
+  // breakpoint mobile
+
+}
+
+.s-system__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
+  height: 100%;
+  padding: 8rem;
+
+  .s-system__card-title {
+    font-size: var(--font-s-48);
+    color: var(--color-white);
+    font-weight: var(--font-w-regular);
+    margin-bottom: 4rem;
+  }
+
+  .s-system__card-paragraph {
+    font-size: var(--font-s-20);
+    line-height: var(--line-h-28);
+    color: var(--color-blue-600);
+    margin-bottom: 2rem;
+  }
+
+  .c-button-ghost {
+    width: fit-content;
+  }
+
+  /* ======== laptop ======== */
+  @include mixins.break(large) {
+    flex-basis: 50%;
+    padding: 3rem;
+
+    .s-system__card-title {
+      font-size: var(--font-s-32);
+      line-height: var(--line-h-34);
+    }
+
+    .s-system__card-paragraph {
+      font-size: var(--font-s-16);
+      line-height: var(--line-h-24);
+    }
+
+    .c-button-ghost {
+      padding: 0.8rem 2rem;
+      font-size: var(--font-s-14);
+    }
+  }
+
+  // breakpoint laptop
+
+  /* ======== mobile ======== */
+  @include mixins.break(medium) {
+    padding: 2rem;
+    flex-basis: 100%;
+  }
+
+  // breakpoint mobile
+
+}
+
+/* ================== INTENTION SECTION ================== */
+.s-intention {
+  min-height: 70rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.s-intention-image-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  .s-intention__image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.s-intention-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  .s-intention__title {
+    font-size: var(--font-s-64);
+    line-height: var(--line-h-78);
+    color: var(--color-white);
+    font-weight: var(--font-w-regular);
+    margin-bottom: 3rem;
+  }
+
+  .s-intention__paragrapha {
+    font-size: var(--font-s-20);
+    line-height: var(--line-h-28);
+    color: var(--color-blue-600);
+    margin-bottom: 5rem;
+    width: 50%;
+    text-align: center;
+  }
+
+  /* ======== mobile ======== */
+  @include mixins.break(medium) {
+
+    .s-intention__title {
+      text-align: center;
+      font-size: var(--font-s-48);
+      line-height: var(--line-h-58);
+    }
+
+    .s-intention__paragrapha {
+      width: 90%;
+    }
+  }
+
+}
+
+.s-intention__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.6rem;
+
+  .c-button,
+  .c-button-ghost {
+    width: fit-content;
   }
 
 }
