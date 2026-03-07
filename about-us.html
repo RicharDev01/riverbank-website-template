@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon-logo-white.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiverBank Planning</title>
+</head>
+
+<body>
+
+  <!-- ================== HEADER SECTION ================== -->
+  <header class="l-header">
+    <section class="l-header__inner l-container l-grid">
+
+      <div class="c-menu-hamburger" id="c-menu-hamburger">
+        <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger__button">
+          <span class="c-hamburger-line"></span>
+          <span class="c-hamburger-line"></span>
+          <span class="c-hamburger-line"></span>
+        </button>
+      </div>
+
+      <a class="c-logo" href="/">
+        <img class="c-logo__img" src="./icons/icon-logo-white.svg" alt="RiverBank Logo">
+      </a>
+
+      <!-- ================== DESKTOP NAVIGATION ================== -->
+      <nav class="c-nav">
+        <ul class="c-nav__list">
+          <li><a class="c-nav__link c-nav__link--active">Home</a></li>
+          <li><a class="c-nav__link">About Us</a></li>
+          <li class="c-nav__item has-dropdown">
+            <a class="c-nav__link">
+              <span class="c-icon-dropdown">
+                Services
+                <img src="./icons/icon-arrow-dropdown.svg" alt="Icon arrow dropdown RiverBank Services" class="">
+              </span>
+            </a>
+            <ul class="c-dropdown">
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">The Riverbank Blueprint<sup>TM</sup></p>
+                  <p class="c-dropdown__description">A one-time strategic financial plan that gives you clear direction
+                    and a personalized roadmap.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">Stewardship Partnership</p>
+                  <p class="c-dropdown__description">An ongoing advisory partnership offering continuous guidance and
+                    holistic financial management.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">Education & Strategic Programs</p>
+                  <p class="c-dropdown__description">Workshops for teams and communities focused on essential financial
+                    skills.</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="c-nav__link">Resources Hub</a></li>
+          <li><a class="c-nav__link">Thought Capital</a></li>
+          <li><a class="c-nav__link">Store</a></li>
+          <li><a class="c-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- ================== MOBILE NAVIGATION ================== -->
+      <nav class="c-nav-mobile l-container" id="c-nav-mobile">
+        <ul class="c-nav-mobile__list">
+          <li class="c-nav__item"><a class="c-nav__link c-nav__link--active">Home</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">About Us</a></li>
+          <li class="c-nav__item has-dropdown" id="has-dropdown">
+            <a class="c-nav__link c-nav__link--services" href="#" id="c-nav__link--services">
+              <span class="c-icon-dropdown">
+                <p>Services</p>
+                <img src="./icons/icon-arrow-dropdown.svg" alt="Icon arrow dropdown RiverBank Services" class="">
+              </span>
+
+            </a>
+            <ul class="c-dropdown-mobile" id="c-dropdown-mobile">
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">The Riverbank Blueprint<sup>TM</sup></p>
+                  <p class="drop-mobile-link__description">A one-time strategic financial plan that gives you clear
+                    direction and a personalized roadmap.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">Stewardship Partnership</p>
+                  <p class="drop-mobile-link__description">An ongoing advisory partnership offering continuous guidance
+                    and holistic financial management.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">Education & Strategic Programs</p>
+                  <p class="drop-mobile-link__description">Workshops for teams and communities focused on essential
+                    financial skills.</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-nav__item"><a class="c-nav__link" href="#">Resources Hub</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Thought Capital</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Store</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Contact</a></li>
+          <li class="c-nav__item">
+            <form action="#" method="post" class="c-search-form-mobile">
+              <button class="c-icon-button c-icon-button--search-mobile" type="button">
+                <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+              </button>
+              <input type="search" name="search" id="search-mobile" class="c-search-form__input"
+                placeholder="Search...">
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="c-header-actions">
+
+        <button class="c-icon-button">
+          <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+        </button>
+
+        <span class="divisor"></span>
+
+        <button class="c-icon-button">
+          <img src="./icons/icon-shopping-bag.svg" alt="Icon shopping bag RiverBank Store">
+          <!-- Aparecer solo cuando hay productos en el carrito -->
+          <span class="badge">30</span>
+        </button>
+
+      </div>
+
+    </section>
+  </header>
+
+  <!-- ================== HERO SECTION ABOUT US ================== -->
+  <section class="b-hero-about">
+
+    <!-- content hero -->
+    <article class="b-hero-about__content l-container">
+
+      <h1 class="title-1 text-white fw-regular">Designing systems that hold under uncertainty.</h1>
+      <p class="text-white subtitle-1 fw-regular mb-5">Riverbank Planning works at the intersection of strategy, education,
+        and governance to help individuals and organizations make deliberate decisions in complex environments.</p>
+      <p class="text-blue-600 subtitle-3">
+        We do not offer shortcuts or guarantees. We design structure.
+      </p>
+
+    </article>
+
+    <!-- image hero -->
+    <div class="b-hero-about__image">
+      <img src="/images/bg-hero-about.svg" alt="Background hero about RiverBank Planning" class="b-hero-about__img">
+    </div>
+
+  </section>
+
+  <!-- ================== GRID WHO WE ARE ================== -->
+  <section class="s-about-grid-info l-container">
+
+    <article class="s-about-grid-info__description">
+      <h2 class="title-3 text-white fw-regular mb-5">Who We Are</h2>
+      <p class="subtitle-3 text-blue-600 mb-4 fw-regular">Riverbank Planning is a strategy-driven planning firm focused on resilience, continuity, and disciplined decision-making.</p>
+      <p class="subtitle-3 text-blue-600 mb-4 fw-regular">We help individuals, organizations, and community institutions navigate complexity by translating uncertainty into structured systems that can be understood, tested, and sustained over time.</p>
+    </article>
+
+    <article class="s-about-grid-info__quote">
+      <p class="s-about-grid-info__quote-text text-white">Riverbank helps individuals and organizations design structured decision environments that support disciplined judgment, reduce uncertainty, and strengthen long-term resilience.</p>
+    </article>
+    
+  </section>
+
+
+  <!-- ================== SECTION OUR PURPOSE ================== -->
+  <section class="s-about-purpose l-container">
+
+    <div class="s-about-purpose__image-container">
+      <img src="/images/s-about-purpose.svg" alt="" class="s-about-purpose__image">
+    </div>
+
+    <article class="s-about-purpose__content">
+      <h2 class="s-about-purpose__title">Our Purpose</h2>
+      <p class="s-about-purpose__paragraph">To support long-term stability by helping people and institutions design systems that remain functional under stress.</p>
+      <p class="s-about-purpose__paragraph">We believe resilience is not achieved through optimization or acceleration, but through well-designed structures, clearly defined constraints, and informed decision frameworks.</p>
+      <p class="s-about-purpose__paragraph">Our role is not to direct outcomes, but to strengthen the systems that shape them.</p>
+    </article>
+
+  </section>
+
+  <!-- ================== OUR APPROACH ================== -->
+  <article class="s-approach">
+
+    <div class="s-approach__box l-container">
+      <section class="s-approach__description">
+        <h2 class="title-2 fw-regular mb-5 text-white">Our Approach</h2>
+        <p class="text-blue-600 fw-regular subtitle-1">Riverbank combines systems thinking, structured education, and disciplined planning frameworks to support clarity, continuity, and informed decision-making. </p>
+      </section>
+
+      <section class="s-approach__list">
+        <div class="s-approach__list-item">
+          <span class="list__number">01</span>
+          <h3 class="list__title">Strategic Planning</h3>
+          <p class="list__description">We help clients define priorities, constraints, and decision rules that guide action across changing conditions.</p>
+        </div>
+        <div class="s-approach__list-item">
+          <span class="list__number">02</span>
+          <h3 class="list__title">Structured Education</h3>
+          <p class="list__description">We provide educational resources that build understanding of financial systems, tradeoffs, and governance — without reducing complexity to oversimplified advice.</p>
+        </div>
+        <div class="s-approach__list-item">
+          <span class="list__number">03</span>
+          <h3 class="list__title">Applied Engagement</h3>
+          <p class="list__description">Through advisory services and facilitated engagements, we support the practical application of structured planning in real-world contexts.</p>
+        </div>
+      </section>
+
+    </div>
+
+  </article>
+
+  <!-- ================== HOW OUR WORK IS ORGANIZED ================== -->
+  <section class="s-organized">
+
+    <div class="s-organized__title text-center">
+      <h2 class="title-3 text-white mb-3 mt-8 fw-regular">How Our Work Is Organized</h2>
+      <p class="subtitle-1 text-white mb-5 fw-regular">Riverbank Planning operates as a master brand with distinct, purpose-built divisions:</p>
+    </div>
+    
+    <section class="s-organized__cards">
+
+      <div class="s-organized__card">
+
+        <div class="s-organized__card-image">
+          <img src="/images/s-organized-rb-learning.svg" alt="Riverbank Learning" class="s-organized__card-img">
+        </div>
+
+        <h3 class="s-organized__card-title">Riverbank Learning</h3>
+
+        <div class="s-organized__card-description">
+          <p class="s-organized__card-paragraph">Structured education and analysis designed to build resilience-focused competency and strategic understanding.</p>
+          <p class="s-organized__card-paragraph">Includes Money, Simplified., our free educational content line focused on explaining financial concepts, frameworks, and decision logic — not offering advice or predictions.</p>
+        </div>
+
+        <a href="#" class="c-button-ghost-sm c-button-ghost--gold">Explore Learning</a>
+
+      </div>
+
+      <div class="s-organized__card">
+
+        <div class="s-organized__card-image">
+          <img src="/images/s-organized-rb-tools.svg" alt="Riverbank Decision Tools" class="s-organized__card-img">
+        </div>
+
+        <h3 class="s-organized__card-title">Riverbank Decision Tools</h3>
+
+        <div class="s-organized__card-description">
+          <p class="s-organized__card-paragraph">A curated collection of planners, templates, and decision tools designed to support disciplined planning and review.</p>
+          <p class="s-organized__card-paragraph">These tools are artifacts of our methodology — not consumer products — and are intended to complement structured planning work.</p>
+        </div>
+
+        <a href="#" class="c-button-ghost-sm c-button-ghost--gold">Explore Tools</a>
+
+      </div>
+
+      <div class="s-organized__card">
+
+        <div class="s-organized__card-image">
+          <img src="/images/s-organized-rb-alliance.svg" alt="Riverbank Alliance" class="s-organized__card-img">
+        </div>
+
+        <h3 class="s-organized__card-title">Riverbank Alliance</h3>
+
+        <div class="s-organized__card-description">
+          <p class="s-organized__card-paragraph">Facilitated services, resilience training programs, and advisory engagements that support organizations and communities in applying structured financial systems.</p>
+          <p class="s-organized__card-paragraph">Alliance engagements emphasize collaboration, clarity, and long-term capacity building.</p>
+        </div>
+
+        <a href="#" class="c-button-ghost-sm c-button-ghost--gold">View Engagements</a>
+
+      </div>
+
+      <div class="s-organized__card">
+
+        <div class="s-organized__card-image">
+          <img src="/images/s-organized-rb-games.svg" alt="Riverbank Games" class="s-organized__card-img">
+        </div>
+
+        <h3 class="s-organized__card-title">Riverbank Games</h3>
+
+        <div class="s-organized__card-description">
+          <p class="s-organized__card-paragraph">Interactive learning tools and games designed to explore financial decision-making, tradeoffs, and systems behavior through simulation and play.</p>
+          <p class="s-organized__card-paragraph">Games are used as educational environments — not entertainment — to support learning through experience.</p>
+        </div>
+
+        <a href="#" class="c-button-ghost-sm c-button-ghost--gold">Explore Games</a>
+
+      </div>
+      
+    </section>
+
+  </section>
+
+  <!-- ================== FOUNDER PERSPECTIVE ================== -->
+  <section class="s-founder">
+
+    <picture class="s-founder__image">
+      <source media="(max-width: 430px)" srcset="/images/s-founder-lines-mobile.svg">
+      <img src="/images/s-founder-lines.svg" alt="Dannielle Sesay / Founder & Executive Consultant Riverbank Planning" class="s-founder__img">
+    </picture>
+
+    <div class="s-founder__title">
+      <h2 class="s-founder__h2">Founder Perspective</h2>
+    </div>
+
+    <article class="s-founder__description">
+
+      <div class="s-founder__description-image"><img src="/images/profile-Dannille.png" alt="Dannille Sesay | profile" class="s-founder__description-img"></div>
+
+      <blockquote class="s-founder__description-paragraph">“Riverbank was created to help people and institutions build planning systems that hold under uncertainty — not by simplifying reality, but by structuring it.”</blockquote>
+
+      <cite class="s-founder__description-name">Dannielle Sesay / <span>Founder & Executive Consultant Riverbank Planning</span> </cite>
+
+    </article>
+
+    <div class="s-founder__cta">
+      <p class="s-founder__cta-content">Dannielle’s work draws on extensive experience in financial governance, compliance, and strategic planning. Her perspective informs Riverbank’s emphasis on discipline, transparency, and long-term resilience across both institutional and individual contexts.</p>
+      <a href="#" class="c-button-sm c-button--gold">Read the Founder’s Perspective</a>
+    </div>
+
+  </section>
+
+
+<!-- ================== WHY RIVERBANK ================== -->
+  <section class="s-why-river l-grid">
+
+    <div class="s-why-river__box l-grid container">
+      <section class="s-why-river__sec1">
+        <h2 class="s-why-river__title">Why Riverbank?</h2>
+
+        <p class="s-why-river__paragraph">Riverbank is not a financial product company or a coaching platform. <br><br> We
+          are a planning and education firm focused on:</p>
+
+        <ul class="s-why-river__list">
+          <li class="s-why-river__list-item">
+            <!-- <span class="s-why-river__list-item-prefix">s</span> -->
+            Disciplined decision-making.
+          </li>
+          <li class="s-why-river__list-item">
+            <!-- <span class="s-why-river__list-item-prefix">s</span> -->
+            Systems that persist across change.
+          </li>
+          <li class="s-why-river__list-item">
+            <!-- <span class="s-why-river__list-item-prefix">s</span> -->
+            Clarity without guarantees.
+          </li>
+        </ul>
+
+        <p class="s-why-river__paragraph">Our role is not to direct outcomes, but to strengthen the systems that shape
+          them.</p>
+      </section>
+
+      <section class="s-why-river__sec2">
+        <h2 class="s-why-river__title">What Guides Our Work</h2>
+        <ul class="s-why-river__list">
+          <li class="s-why-river__list-item">
+            <h3 class="s-why-river__list-title">Systems Over Tactics</h3>
+            We focus on durable structures, not short-term fixes.
+          </li>
+          <li class="s-why-river__list-item">
+            <h3 class="s-why-river__list-title">Clarity Before Action</h3>
+            Decisions are only as strong as the frameworks behind them.
+          </li>
+          <li class="s-why-river__list-item">
+            <h3 class="s-why-river__list-title">Restraint as Strategy</h3>
+            We prioritize what matters by defining constraints.
+          </li>
+          <li class="s-why-river__list-item">
+            <h3 class="s-why-river__list-title">Education as Infrastructure</h3>
+            Understanding is not optional — it’s foundational.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="s-why-river__image-container">
+      <img src="/images/s-why-river.svg" alt="What guides our work RiverBank Planning" class="s-why-river__image">
+    </div>
+
+  </section>
+
+
+  <!-- ================== FOOTER SECTION ================== -->
+  <footer class="l-footer">
+    <div class="l-footer-box l-container l-grid">
+
+      <!-- NewsLetter -->
+      <section class="b-newsletter-container l-grid">
+        <!-- Content Newsletter -->
+        <h2 class="b-newsletter__title">Get the latest news from Riverbank in your inbox.</h2>
+
+        <div class="b-newsletter-content">
+          <p class="b-newsletter__subtitle">Sign up to receive top posts from the week — from product announcements to
+            everyday tips.</p>
+          <form class="b-newsletter-form" method="POST" action="#">
+            <input type="email" name="email-user-newsletter" id="email-user-newsletter"
+              placeholder="Enter your email address" class="b-newsletter-form__input" required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            <button type="submit" class="c-button-sm c-button--gold b-newsletter-form__button">Subscribe</button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- Footer Links -->
+      <section class="c-footer-links-container l-grid">
+        <!-- Content Footer Links -->
+        <div class="c-footer-links-content">
+          <h2 class="c-footer-links__title">RiverBank Planning</h2>
+          <p class="c-footer-links__subtitle">Sign up to receive top posts from the week — from product announcements to
+            everyday tips.</p>
+        </div>
+
+        <!-- Links List -->
+        <nav class="c-footer-links-nav l-grid">
+          <!-- Resources -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Resources</a></li>
+            <li><a class="c-footer-links-link">Financial Guides</a></li>
+            <li><a class="c-footer-links-link">Planning Templates</a></li>
+            <li><a class="c-footer-links-link">Educational Videos</a></li>
+            <li><a class="c-footer-links-link">Webinars</a></li>
+          </ul>
+          <!-- Outreach & Initiatives -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Outreach & Initiatives</a></li>
+            <li><a class="c-footer-links-link">Community Programs</a></li>
+            <li><a class="c-footer-links-link">Partnerships</a></li>
+            <li><a class="c-footer-links-link">Events</a></li>
+            <li><a class="c-footer-links-link">Newsletter Archive</a></li>
+          </ul>
+          <!-- More about us -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">More About Us</a></li>
+            <li><a class="c-footer-links-link">Our Story</a></li>
+            <li><a class="c-footer-links-link">Team</a></li>
+            <li><a class="c-footer-links-link">Contact</a></li>
+          </ul>
+          <!-- Legal -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Legal</a></li>
+            <li><a class="c-footer-links-link">Privacy Notice</a></li>
+            <li><a class="c-footer-links-link">Terms & Conditions</a></li>
+            <li><a class="c-footer-links-link">Accessibility Statement</a></li>
+            <li><a class="c-footer-links-link">Intellectual Property & Content Use Policy</a></li>
+            <li><a class="c-footer-links-link">Shipping & Delivery Policy</a></li>
+          </ul>
+        </nav>
+
+        <p class="c-footer-links-copy">&copy; 2026 RiverBank Planning. All rights reserved.</p>
+
+      </section>
+
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

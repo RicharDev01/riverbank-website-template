@@ -106,7 +106,7 @@ $ghost-variants: (
 }
 
 /* Ghost Button Animation */
- /* .c-button-ghost::before {
+/* .c-button-ghost::before {
   content: "";
   position: absolute;
   display: block;
@@ -119,7 +119,7 @@ $ghost-variants: (
               width 300ms ease,
               left 300ms ease;
   z-index: -1;
-  transform: skew(20deg);
+  // transform: skew(20deg);
 }
 .c-button-ghost:hover::before {
   width: 150%;

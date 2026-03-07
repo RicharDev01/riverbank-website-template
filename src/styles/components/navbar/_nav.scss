@@ -1,7 +1,6 @@
 @use "../../config/mixins";
 
 .c-nav {
-  // background-color: tomato;
   justify-items: center;
 
   @include mixins.break(large) {
@@ -30,7 +29,119 @@
 
 }
 
-.c-nav__link--active { color: var(--color-white); }
+.c-nav__link--active {
+  color: var(--color-white);
+}
+
+/* =========================================
+   DESKTOP DROPDOWN
+   ========================================= */
+
+.has-dropdown {
+  position: relative;
+
+  // Crear un área invisible para mantener el hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    z-index: 99;
+  }
+
+  .c-icon-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    img {
+      width: 1.6rem;
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .c-icon-dropdown img {
+    transform: rotate(0deg);
+  }
+}
+
+.c-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  min-width: 35rem;
+  background-color: var(--color-primary);
+  border: 0.1rem solid var(--color-blue-700);
+  border-radius: var(--space-sm);
+  list-style: none;
+  padding: 1.2rem;
+  margin-top: 0.5rem;
+  z-index: 100;
+
+  // Oculto por defecto - SIN transición para evitar animación al cargar
+  opacity: 0;
+  transform-origin: top center;
+  pointer-events: none;
+  transform: scaleY(0) translatex(-50%) translateY(-1rem);
+
+  // Mostrar al hacer hover en el padre
+  .has-dropdown:hover & {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scaleY(1) translatex(-50%) translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  // Transition al salir del hover
+  .has-dropdown:not(:hover) & {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .c-dropdown__link {
+    display: block;
+    padding: 1.6rem;
+    text-decoration: none;
+    border-radius: var(--space-xs);
+    transition: background-color 0.2s ease;
+
+    .c-dropdown__title {
+      font-size: var(--font-s-16);
+      font-weight: var(--font-w-semibold);
+      color: var(--color-white);
+      margin-bottom: 0.8rem;
+      line-height: var(--line-h-24);
+    }
+
+    .c-dropdown__description {
+      font-size: var(--font-s-14);
+      font-weight: var(--font-w-regular);
+      color: var(--color-blue-600);
+      line-height: var(--line-h-20);
+    }
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-primary) 70%, black 30%);
+      .c-dropdown__title{
+        color: var(--color-secondary);
+      }
+      .c-dropdown__description{
+        color: var(--color-secondary);
+      }
+    }
+  }
+
+  // Separador entre items
+  // li:not(:last-child) {
+  //   border-bottom: 0.1rem solid var(--color-blue-700);
+  // }
+
+  @include mixins.break(large) {
+    display: none;
+  }
+}
 
 
 /* =========================================
@@ -55,12 +166,17 @@
   }
 
   // Scrollbar styles for WebKit browsers
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin;
+  /* Firefox */
   scrollbar-color: var(--color-blue-600) transparent;
 
-  &::-webkit-scrollbar { width: 10px; }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
 
-  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
   &::-webkit-scrollbar-thumb {
     background-color: var(--color-blue-600);
@@ -69,7 +185,9 @@
     background-clip: content-box;
   }
 
-  &::-webkit-scrollbar-button { display: none; }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
 
 
   .c-nav-mobile__list {
@@ -85,25 +203,25 @@
     padding: 3.6rem 0; // 36px
     border-bottom: 0.1rem solid var(--color-blue-700);
     text-decoration: none;
-    
-    &:hover { color: var(--color-white); }
+
+    &:hover {
+      color: var(--color-white);
+    }
 
   }
 
   // Quitar border al último link (penúltimo li porque el último tiene el form)
-  .c-nav-mobile__list > 
-  .c-nav__item:nth-last-child(2) 
-  .c-nav__link {
+  .c-nav-mobile__list>.c-nav__item:nth-last-child(2) .c-nav__link {
     border-bottom: none;
   }
 
   .c-nav__link--services {
     cursor: pointer;
-    
+
     .c-icon-dropdown {
       display: flex;
       justify-content: space-between;
-      
+
       img {
         width: 2rem;
         transition: transform 0.3s ease;
@@ -137,7 +255,9 @@
       border-bottom: 1px solid var(--color-blue-600);
       text-decoration: none;
 
-      &:hover { color: var(--color-white); }
+      &:hover {
+        color: var(--color-white);
+      }
 
       .drop-mobile-link__title {
         font-size: var(--font-s-16); // 16px
@@ -146,7 +266,9 @@
         color: var(--color-white);
       }
 
-      .drop-mobile-link__description { font-size: var(--font-s-14); }
+      .drop-mobile-link__description {
+        font-size: var(--font-s-14);
+      }
 
     }
   }
@@ -164,7 +286,7 @@
     gap: 1.2rem;
     padding-left: 2rem;
     // margin: 0 2rem;
-    background-color:  color-mix(in srgb, var(--color-primary) 90%, black 10%);
+    background-color: color-mix(in srgb, var(--color-primary) 90%, black 10%);
     border-radius: var(--space-sm);
     border: 0.1rem solid var(--color-blue-700);
 

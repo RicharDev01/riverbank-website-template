@@ -122,4 +122,37 @@ $utility-colors: (
 // Clase utilitaria para Grids
 .l-grid { display: grid; }
 
+// Margins - Sistema escalable con mapa
+$margin-sizes: (
+  0: 0,
+  1: 0.5rem,
+  2: 1rem,
+  3: 1.5rem,
+  4: 2rem,
+  5: 3rem,
+  6: 4rem,
+  7: 5rem,
+  8: 6rem,
+  9: 8rem,
+  10: 10rem
+);
+
+// Direcciones de margen
+$margin-directions: (
+  "": margin,          // m-*  (todos los lados)
+  "t": margin-top,     // mt-* (top)
+  "b": margin-bottom,  // mb-* (bottom)
+  "l": margin-left,    // ml-* (left)
+  "r": margin-right    // mr-* (right)
+);
+
+// Generar clases de margen
+@each $dir-key, $dir-property in $margin-directions {
+  @each $size-key, $size-value in $margin-sizes {
+    .m#{$dir-key}-#{$size-key} {
+      #{$dir-property}: $size-value;
+    }
+  }
+}
+
 
