@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon-logo-white.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiverBank Planning</title>
+</head>
+
+<body>
+
+  <!-- ================== HEADER SECTION ================== -->
+  <header class="l-header">
+    <section class="l-header__inner l-container l-grid">
+
+      <div class="c-menu-hamburger" id="c-menu-hamburger">
+        <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger__button">
+          <span class="c-hamburger-line"></span>
+          <span class="c-hamburger-line"></span>
+          <span class="c-hamburger-line"></span>
+        </button>
+      </div>
+
+      <a class="c-logo" href="/">
+        <img class="c-logo__img" src="./icons/icon-logo-white.svg" alt="RiverBank Logo">
+      </a>
+
+      <!-- ================== DESKTOP NAVIGATION ================== -->
+      <nav class="c-nav">
+        <ul class="c-nav__list">
+          <li><a class="c-nav__link c-nav__link--active">Home</a></li>
+          <li><a class="c-nav__link" href="/about-us.html">About Us</a></li>
+          <li class="c-nav__item has-dropdown">
+            <a class="c-nav__link">
+              <span class="c-icon-dropdown">
+                Services
+                <img src="./icons/icon-arrow-dropdown.svg" alt="Icon arrow dropdown RiverBank Services" class="">
+              </span>
+            </a>
+            <ul class="c-dropdown">
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">The Riverbank Blueprint<sup>TM</sup></p>
+                  <p class="c-dropdown__description">A one-time strategic financial plan that gives you clear direction and a personalized roadmap.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">Stewardship Partnership</p>
+                  <p class="c-dropdown__description">An ongoing advisory partnership offering continuous guidance and holistic financial management.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">Education & Strategic Programs</p>
+                  <p class="c-dropdown__description">Workshops for teams and communities focused on essential financial skills.</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="c-nav__link">Resources Hub</a></li>
+          <li><a class="c-nav__link">Thought Capital</a></li>
+          <li><a class="c-nav__link">Store</a></li>
+          <li><a class="c-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- ================== MOBILE NAVIGATION ================== -->
+      <nav class="c-nav-mobile l-container" id="c-nav-mobile">
+        <ul class="c-nav-mobile__list">
+          <li class="c-nav__item"><a class="c-nav__link c-nav__link--active">Home</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">About Us</a></li>
+          <li class="c-nav__item has-dropdown" id="has-dropdown">
+            <a class="c-nav__link c-nav__link--services" href="#" id="c-nav__link--services">
+              <span class="c-icon-dropdown">
+                <p>Services</p>
+                <img src="./icons/icon-arrow-dropdown.svg" alt="Icon arrow dropdown RiverBank Services" class="">
+              </span>
+
+            </a>
+            <ul class="c-dropdown-mobile" id="c-dropdown-mobile">
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">The Riverbank Blueprint<sup>TM</sup></p>
+                  <p class="drop-mobile-link__description">A one-time strategic financial plan that gives you clear
+                    direction and a personalized roadmap.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">Stewardship Partnership</p>
+                  <p class="drop-mobile-link__description">An ongoing advisory partnership offering continuous guidance
+                    and holistic financial management.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">Education & Strategic Programs</p>
+                  <p class="drop-mobile-link__description">Workshops for teams and communities focused on essential
+                    financial skills.</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-nav__item"><a class="c-nav__link" href="#">Resources Hub</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Thought Capital</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Store</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Contact</a></li>
+          <li class="c-nav__item">
+            <form action="#" method="post" class="c-search-form-mobile">
+              <button class="c-icon-button c-icon-button--search-mobile" type="button">
+                <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+              </button>
+              <input type="search" name="search" id="search-mobile" class="c-search-form__input"
+                placeholder="Search...">
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="c-header-actions">
+
+        <button class="c-icon-button">
+          <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+        </button>
+
+        <span class="divisor"></span>
+
+        <button class="c-icon-button">
+          <img src="./icons/icon-shopping-bag.svg" alt="Icon shopping bag RiverBank Store">
+          <!-- Aparecer solo cuando hay productos en el carrito -->
+          <span class="badge">30</span>
+        </button>
+
+      </div>
+
+    </section>
+  </header>
+
+  <!-- ================== CONTACT SECTION ================== -->
+  <section class="b-contact l-container" id="contact">
+    <div class="b-contact__content">
+      <h1 class="b-contact__title">Contact Us for Support or Inquiries.</h1>
+
+      <form class="c-contact-form" id="contact-form" novalidate>
+        <div class="c-contact-form__field">
+          <label class="c-contact-form__label" for="contact-name">Name*</label>
+          <input class="c-contact-form__input" type="text" id="contact-name" name="contact-name" placeholder="Your name" required>
+          <span class="c-contact-form__error" aria-live="polite"></span>
+        </div>
+
+        <div class="c-contact-form__field">
+          <label class="c-contact-form__label" for="contact-email">Email*</label>
+          <input class="c-contact-form__input" type="email" id="contact-email" name="contact-email" placeholder="Your email" required>
+          <span class="c-contact-form__error" aria-live="polite"></span>
+        </div>
+
+        <div class="c-contact-form__field">
+          <label class="c-contact-form__label" for="contact-subject">Need help?*</label>
+          <input class="c-contact-form__input" type="text" id="contact-subject" name="contact-subject" placeholder="The Riverbank Blueprint" required>
+          <span class="c-contact-form__error" aria-live="polite"></span>
+        </div>
+
+        <div class="c-contact-form__field">
+          <label class="c-contact-form__label" for="contact-message">Message*</label>
+          <textarea class="c-contact-form__input c-contact-form__textarea" id="contact-message" name="contact-message" placeholder="Tell us about your request" rows="4" required></textarea>
+          <span class="c-contact-form__error" aria-live="polite"></span>
+        </div>
+
+        <button class="c-button-sm c-button--gold c-contact-form__button" type="submit">Send message</button>
+
+        <p class="c-contact-form__note">Prefer to talk instead of writing? Let’s meet. Or if email works better for you, we’re just one message away.</p>
+
+        <div class="c-contact-form__icons">
+          <img src="/icons/icon-email-gray.svg" alt="Email icon" class="c-contact-form__icon">
+          <img src="/icons/icon-phone-gray.svg" alt="Phone icon" class="c-contact-form__icon">
+        </div>
+      </form>
+    </div>
+
+    <div class="b-contact__visual">
+      <img src="/images/contact-lines.svg" alt="Contact background lines" class="b-contact__image">
+    </div>
+  </section>
+
+  <!-- ================== FREQUENTLY ASKED QUESTIONS SECTION ================== -->
+  <section class="b-faq l-container" id="faq">
+    <div class="b-faq__title">
+      <h2 class="title-3 text-white fw-regular">Helpful Information</h2>
+    </div>
+
+    <div class="b-faq__list">
+      <article class="c-accordion" data-accordion>
+        <button class="c-accordion__header" type="button" aria-expanded="true" aria-controls="faq-panel-1" id="faq-header-1">
+          <span class="c-accordion__question">What does Riverbank Planning do?</span>
+          <span class="c-accordion__icon" aria-hidden="true"></span>
+        </button>
+        <div class="c-accordion__panel" id="faq-panel-1" role="region" aria-labelledby="faq-header-1">
+          <p class="c-accordion__answer">We help individuals, families, and organizations build resilience through strategic planning, financial education, and values-driven guidance. Our work focuses on clarity, confidence, and long-term purpose.</p>
+        </div>
+      </article>
+
+      <article class="c-accordion" data-accordion>
+        <button class="c-accordion__header" type="button" aria-expanded="false" aria-controls="faq-panel-2" id="faq-header-2">
+          <span class="c-accordion__question">How do I know if your services are right for me?</span>
+          <span class="c-accordion__icon" aria-hidden="true"></span>
+        </button>
+        <div class="c-accordion__panel" id="faq-panel-2" role="region" aria-labelledby="faq-header-2" hidden>
+          <p class="c-accordion__answer">If you are looking for structure, clarity, and a longer-term view rather than quick fixes, our services are likely a fit. We tailor each engagement to the complexity of your situation.</p>
+        </div>
+      </article>
+
+      <article class="c-accordion" data-accordion>
+        <button class="c-accordion__header" type="button" aria-expanded="false" aria-controls="faq-panel-3" id="faq-header-3">
+          <span class="c-accordion__question">Do you offer financial planning?</span>
+          <span class="c-accordion__icon" aria-hidden="true"></span>
+        </button>
+        <div class="c-accordion__panel" id="faq-panel-3" role="region" aria-labelledby="faq-header-3" hidden>
+          <p class="c-accordion__answer">Yes. We deliver strategic financial planning grounded in governance, risk awareness, and continuity rather than short-term performance.</p>
+        </div>
+      </article>
+
+      <article class="c-accordion" data-accordion>
+        <button class="c-accordion__header" type="button" aria-expanded="false" aria-controls="faq-panel-4" id="faq-header-4">
+          <span class="c-accordion__question">Do you work with organizations?</span>
+          <span class="c-accordion__icon" aria-hidden="true"></span>
+        </button>
+        <div class="c-accordion__panel" id="faq-panel-4" role="region" aria-labelledby="faq-header-4" hidden>
+          <p class="c-accordion__answer">We partner with institutions, teams, and community organizations to build financial systems and planning frameworks that scale with complexity.</p>
+        </div>
+      </article>
+
+      <article class="c-accordion" data-accordion>
+        <button class="c-accordion__header" type="button" aria-expanded="false" aria-controls="faq-panel-5" id="faq-header-5">
+          <span class="c-accordion__question">How can I book a session?</span>
+          <span class="c-accordion__icon" aria-hidden="true"></span>
+        </button>
+        <div class="c-accordion__panel" id="faq-panel-5" role="region" aria-labelledby="faq-header-5" hidden>
+          <p class="c-accordion__answer">Submit the form above and we will follow up with scheduling options based on your goals and availability.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================== FOOTER SECTION ================== -->
+  <footer class="l-footer">
+    <div class="l-footer-box l-container l-grid">
+
+      <!-- NewsLetter -->
+      <section class="b-newsletter-container l-grid">
+        <!-- Content Newsletter -->
+        <h2 class="b-newsletter__title">Get the latest news from Riverbank in your inbox.</h2>
+
+        <div class="b-newsletter-content">
+          <p class="b-newsletter__subtitle">Sign up to receive top posts from the week — from product announcements to
+            everyday tips.</p>
+          <form class="b-newsletter-form" method="POST" action="#">
+            <input type="email" name="email-user-newsletter" id="email-user-newsletter"
+              placeholder="Enter your email address" class="b-newsletter-form__input" required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            <button type="submit" class="c-button-sm c-button--gold b-newsletter-form__button">Subscribe</button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- Footer Links -->
+      <section class="c-footer-links-container l-grid">
+        <!-- Content Footer Links -->
+        <div class="c-footer-links-content">
+          <h2 class="c-footer-links__title">RiverBank Planning</h2>
+          <p class="c-footer-links__subtitle">Sign up to receive top posts from the week — from product announcements to
+            everyday tips.</p>
+        </div>
+
+        <!-- Links List -->
+        <nav class="c-footer-links-nav l-grid">
+          <!-- Resources -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Resources</a></li>
+            <li><a class="c-footer-links-link">Financial Guides</a></li>
+            <li><a class="c-footer-links-link">Planning Templates</a></li>
+            <li><a class="c-footer-links-link">Educational Videos</a></li>
+            <li><a class="c-footer-links-link">Webinars</a></li>
+          </ul>
+          <!-- Outreach & Initiatives -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Outreach & Initiatives</a></li>
+            <li><a class="c-footer-links-link">Community Programs</a></li>
+            <li><a class="c-footer-links-link">Partnerships</a></li>
+            <li><a class="c-footer-links-link">Events</a></li>
+            <li><a class="c-footer-links-link">Newsletter Archive</a></li>
+          </ul>
+          <!-- More about us -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">More About Us</a></li>
+            <li><a class="c-footer-links-link">Our Story</a></li>
+            <li><a class="c-footer-links-link">Team</a></li>
+            <li><a class="c-footer-links-link">Contact</a></li>
+          </ul>
+          <!-- Legal -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Legal</a></li>
+            <li><a class="c-footer-links-link">Privacy Notice</a></li>
+            <li><a class="c-footer-links-link">Terms & Conditions</a></li>
+            <li><a class="c-footer-links-link">Accessibility Statement</a></li>
+            <li><a class="c-footer-links-link">Intellectual Property & Content Use Policy</a></li>
+            <li><a class="c-footer-links-link">Shipping & Delivery Policy</a></li>
+          </ul>
+        </nav>
+
+        <p class="c-footer-links-copy">&copy; 2026 RiverBank Planning. All rights reserved.</p>
+
+      </section>
+
+    </div>
+  </footer>
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
