@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon-logo-white.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiverBank Planning</title>
+</head>
+
+<body>
+
+  <!-- ================== HEADER SECTION ================== -->
+  <header class="l-header">
+    <section class="l-header__inner l-container l-grid">
+
+      <div class="c-menu-hamburger" id="c-menu-hamburger">
+        <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger__button">
+          <span class="c-hamburger-line"></span>
+          <span class="c-hamburger-line"></span>
+          <span class="c-hamburger-line"></span>
+        </button>
+      </div>
+
+      <a class="c-logo" href="/">
+        <img class="c-logo__img" src="./icons/icon-logo-white.svg" alt="RiverBank Logo">
+      </a>
+
+      <!-- ================== DESKTOP NAVIGATION ================== -->
+      <nav class="c-nav">
+        <ul class="c-nav__list">
+          <li><a class="c-nav__link c-nav__link--active">Home</a></li>
+          <li><a class="c-nav__link" href="/about-us.html">About Us</a></li>
+          <li class="c-nav__item has-dropdown">
+            <a class="c-nav__link">
+              <span class="c-icon-dropdown">
+                Services
+                <img src="./icons/icon-arrow-dropdown.svg" alt="Icon arrow dropdown RiverBank Services" class="">
+              </span>
+            </a>
+            <ul class="c-dropdown">
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">The Riverbank Blueprint<sup>TM</sup></p>
+                  <p class="c-dropdown__description">A one-time strategic financial plan that gives you clear direction and a personalized roadmap.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">Stewardship Partnership</p>
+                  <p class="c-dropdown__description">An ongoing advisory partnership offering continuous guidance and holistic financial management.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link" href="#">
+                  <p class="c-dropdown__title">Education & Strategic Programs</p>
+                  <p class="c-dropdown__description">Workshops for teams and communities focused on essential financial skills.</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="c-nav__link">Resources Hub</a></li>
+          <li><a class="c-nav__link">Thought Capital</a></li>
+          <li><a class="c-nav__link">Store</a></li>
+          <li><a class="c-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- ================== MOBILE NAVIGATION ================== -->
+      <nav class="c-nav-mobile l-container" id="c-nav-mobile">
+        <ul class="c-nav-mobile__list">
+          <li class="c-nav__item"><a class="c-nav__link c-nav__link--active">Home</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">About Us</a></li>
+          <li class="c-nav__item has-dropdown" id="has-dropdown">
+            <a class="c-nav__link c-nav__link--services" href="#" id="c-nav__link--services">
+              <span class="c-icon-dropdown">
+                <p>Services</p>
+                <img src="./icons/icon-arrow-dropdown.svg" alt="Icon arrow dropdown RiverBank Services" class="">
+              </span>
+
+            </a>
+            <ul class="c-dropdown-mobile" id="c-dropdown-mobile">
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">The Riverbank Blueprint<sup>TM</sup></p>
+                  <p class="drop-mobile-link__description">A one-time strategic financial plan that gives you clear
+                    direction and a personalized roadmap.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">Stewardship Partnership</p>
+                  <p class="drop-mobile-link__description">An ongoing advisory partnership offering continuous guidance
+                    and holistic financial management.</p>
+                </a>
+              </li>
+              <li>
+                <a class="c-dropdown__link">
+                  <p class="drop-mobile-link__title">Education & Strategic Programs</p>
+                  <p class="drop-mobile-link__description">Workshops for teams and communities focused on essential
+                    financial skills.</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-nav__item"><a class="c-nav__link" href="#">Resources Hub</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Thought Capital</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Store</a></li>
+          <li class="c-nav__item"><a class="c-nav__link">Contact</a></li>
+          <li class="c-nav__item">
+            <form action="#" method="post" class="c-search-form-mobile">
+              <button class="c-icon-button c-icon-button--search-mobile" type="button">
+                <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+              </button>
+              <input type="search" name="search" id="search-mobile" class="c-search-form__input"
+                placeholder="Search...">
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="c-header-actions">
+
+        <button class="c-icon-button">
+          <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+        </button>
+
+        <span class="divisor"></span>
+
+        <button class="c-icon-button">
+          <img src="./icons/icon-shopping-bag.svg" alt="Icon shopping bag RiverBank Store">
+          <!-- Aparecer solo cuando hay productos en el carrito -->
+          <span class="badge">30</span>
+        </button>
+
+      </div>
+
+    </section>
+  </header>
+
+    
+  <!-- ================== HERO SECTION ================== -->
+  <section class="b-service-hero">
+    <div class="b-service-hero__media">
+      <img src="/images/hero-service-education.svg" alt="The Riverbank Education hero" class="b-service-hero__img">
+    </div>
+
+    <div class="b-service-hero__content l-container">
+      <div class="b-service-hero__card">
+        <h1 class="b-service-hero__title">Education & <br> Strategic Programs</h1>
+        <p class="b-service-hero__subtitle">Building understanding, confidence, and capacity through accessible education.</p>
+        <p class="b-service-hero__subtitle">Riverbank Planning deliver strategy-backed education designed to strengthen resilience competency, decision-making, and organizational resilience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== Program Areas SECTION ================== -->
+  <section class="b-service-receive l-container">
+    <h2 class="b-service-receive__title">Program Areas</h2>
+
+    <div class="b-service-receive__list">
+      <div class="b-service-receive__item">
+        <img src="/public/images/s-organized-rb-tools.svg" class="b-service-receive__icon" aria-hidden="true">
+        <span class="b-service-receive__text">Financial foundations and decision-making</span>
+      </div>
+      <div class="b-service-receive__item">
+        <img src="/public/images/s-organized-rb-tools.svg" class="b-service-receive__icon" aria-hidden="true">
+        <span class="b-service-receive__text">Strategic planning and fiscal accountability</span>
+      </div>
+      <div class="b-service-receive__item">
+        <img src="/public/images/s-organized-rb-tools.svg" class="b-service-receive__icon" aria-hidden="true">
+        <span class="b-service-receive__text">Risk awareness and resilience building</span>
+      </div>
+      <div class="b-service-receive__item">
+        <img src="/public/images/s-organized-rb-tools.svg" class="b-service-receive__icon" aria-hidden="true">
+        <span class="b-service-receive__text">Business and nonprofit financial resilience-focused planning</span>
+      </div>
+      <div class="b-service-receive__item">
+        <img src="/public/images/s-organized-rb-tools.svg" class="b-service-receive__icon" aria-hidden="true">
+        <span class="b-service-receive__text">Governance and operational alignment</span>
+      </div>
+    </div>
+
+    <div class="b-service-receive__note">
+      <p>This engagement is ideal for clients who want clarity in decision environments without obligation and strategy without pressure.</p>
+    </div>
+
+  </section>
+
+  <!-- ================== WHO IT'S FOR SECTION ================== -->
+  <section class="b-service-for b-service-for--four l-container">
+    <h2 class="b-service-for__title">Who It’s For</h2>
+    <div class="b-service-for__cards">
+      <article class="b-service-for__card">
+        <h3>Organizations &amp; Community Groups</h3>
+        <p>Strengthening impact through structured financial direction.</p>
+      </article>
+      <article class="b-service-for__card">
+        <h3>Schools & Educational Institutions</h3>
+        <p>Building sustainable foundations for long-term stability.</p>
+      </article>
+      <article class="b-service-for__card">
+        <h3>Nonprofits & Mission-Driven Teams</h3>
+        <p>Aligning resources with purpose and measurable outcomes.</p>
+      </article>
+      <article class="b-service-for__card">
+        <h3>First-Generation Professionals & Underserved Communities</h3>
+        <p>Creating access, clarity, and pathways to financial empowerment.</p>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ================== The Riverbed Alliance SECTION ================== -->
+
+  <section class="b-service-alliance l-container">
+    <div class="b-service-alliance__card">
+      <div class="b-service-alliance__content">
+        <h2 class="b-service-alliance__title">The Riverbed Alliance</h2>
+        <p class="b-service-alliance__lead">A private learning and peer community designed to support women building strong financial and business foundations.</p>
+        <p class="b-service-alliance__note">Participation in The Riverbed Alliance is educational and community-based, not advisory.</p>
+      </div>
+      <img src="/public/images/service-education-section-alliance.svg" alt="The Riverbed Alliance" class="b-service-alliance__img">
+    </div>
+  </section>
+
+  
+  <!-- ================== FOOTER SECTION ================== -->
+  <footer class="l-footer">
+    <div class="l-footer-box l-container l-grid">
+
+      <!-- NewsLetter -->
+      <section class="b-newsletter-container l-grid">
+        <!-- Content Newsletter -->
+        <h2 class="b-newsletter__title">Get the latest news from Riverbank in your inbox.</h2>
+
+        <div class="b-newsletter-content">
+          <p class="b-newsletter__subtitle">Sign up to receive top posts from the week — from product announcements to
+            everyday tips.</p>
+          <form class="b-newsletter-form" method="POST" action="#">
+            <input type="email" name="email-user-newsletter" id="email-user-newsletter"
+              placeholder="Enter your email address" class="b-newsletter-form__input" required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            <button type="submit" class="c-button-sm c-button--gold b-newsletter-form__button">Subscribe</button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- Footer Links -->
+      <section class="c-footer-links-container l-grid">
+        <!-- Content Footer Links -->
+        <div class="c-footer-links-content">
+          <h2 class="c-footer-links__title">RiverBank Planning</h2>
+          <p class="c-footer-links__subtitle">Sign up to receive top posts from the week — from product announcements to
+            everyday tips.</p>
+        </div>
+
+        <!-- Links List -->
+        <nav class="c-footer-links-nav l-grid">
+          <!-- Resources -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Resources</a></li>
+            <li><a class="c-footer-links-link">Financial Guides</a></li>
+            <li><a class="c-footer-links-link">Planning Templates</a></li>
+            <li><a class="c-footer-links-link">Educational Videos</a></li>
+            <li><a class="c-footer-links-link">Webinars</a></li>
+          </ul>
+          <!-- Outreach & Initiatives -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Outreach & Initiatives</a></li>
+            <li><a class="c-footer-links-link">Community Programs</a></li>
+            <li><a class="c-footer-links-link">Partnerships</a></li>
+            <li><a class="c-footer-links-link">Events</a></li>
+            <li><a class="c-footer-links-link">Newsletter Archive</a></li>
+          </ul>
+          <!-- More about us -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">More About Us</a></li>
+            <li><a class="c-footer-links-link">Our Story</a></li>
+            <li><a class="c-footer-links-link">Team</a></li>
+            <li><a class="c-footer-links-link">Contact</a></li>
+          </ul>
+          <!-- Legal -->
+          <ul class="c-footer-links-list">
+            <li><a class="c-footer-links-link c-footer-links-link--title">Legal</a></li>
+            <li><a class="c-footer-links-link">Privacy Notice</a></li>
+            <li><a class="c-footer-links-link">Terms & Conditions</a></li>
+            <li><a class="c-footer-links-link">Accessibility Statement</a></li>
+            <li><a class="c-footer-links-link">Intellectual Property & Content Use Policy</a></li>
+            <li><a class="c-footer-links-link">Shipping & Delivery Policy</a></li>
+          </ul>
+        </nav>
+
+        <p class="c-footer-links-copy">&copy; 2026 RiverBank Planning. All rights reserved.</p>
+
+      </section>
+
+    </div>
+  </footer>
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
