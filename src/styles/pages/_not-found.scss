@@ -1,0 +1,88 @@
+@use "../config/mixins";
+
+.b-error {
+	padding: 6rem 0 8rem;
+}
+
+.b-error__card {
+	border-radius: var(--radius-lg);
+	border: 0.1rem solid rgba(219, 220, 226, 0.35);
+	background-color: color-mix(in srgb, var(--color-primary) 85%, black 15%);
+	padding: 6rem 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 1.8rem;
+}
+
+.b-error__img {
+	width: min(36rem, 70%);
+	height: auto;
+	opacity: 0.85;
+}
+
+.b-error__title {
+	font-size: var(--font-s-56);
+	line-height: var(--line-h-66);
+	font-weight: var(--font-w-regular);
+	color: var(--color-white);
+	margin: 0;
+}
+
+.b-error__accent {
+	color: var(--color-danger);
+}
+
+.b-error__subtitle {
+	font-size: var(--font-s-18);
+	line-height: var(--line-h-28);
+	color: var(--color-blue-600);
+	max-width: 56rem;
+	margin: 0;
+}
+
+.b-error__cta {
+	margin-top: 1.2rem;
+}
+
+@include mixins.break(large) {
+	.b-error__card {
+		padding: 4rem 3rem;
+	}
+
+	.b-error__title {
+		font-size: var(--font-s-48);
+		line-height: var(--line-h-56);
+	}
+
+	.b-error__img {
+		width: min(32rem, 80%);
+	}
+}
+
+@include mixins.break(medium) {
+	.b-error {
+		padding: 4rem 0 6rem;
+	}
+
+	.b-error__card {
+		padding: 3rem 2.4rem;
+	}
+
+	.b-error__title {
+		font-size: var(--font-s-40);
+		line-height: var(--line-h-48);
+	}
+
+	.b-error__subtitle {
+		font-size: var(--font-s-16);
+		line-height: var(--line-h-24);
+	}
+}
+
+@include mixins.break(small) {
+	.b-error__img {
+		width: min(26rem, 90%);
+	}
+}
