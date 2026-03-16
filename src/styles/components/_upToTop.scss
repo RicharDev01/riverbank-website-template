@@ -1,0 +1,44 @@
+.c-button-up-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-secondary) var(--scroll-progress, 0%),
+    var(--color-primary) 0
+  );
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: pointer;
+  position: fixed;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0.3rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    z-index: 0;
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
