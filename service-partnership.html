@@ -14,8 +14,8 @@
   <header class="l-header">
     <section class="l-header__inner l-container l-grid">
 
-      <div class="c-menu-hamburger" id="c-menu-hamburger">
-        <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger__button">
+      <div class="c-menu-hamburger" id="c-menu-hamburger-mobile">
+        <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger-mobile__button">
           <span class="c-hamburger-line"></span>
           <span class="c-hamburger-line"></span>
           <span class="c-hamburger-line"></span>
@@ -42,19 +42,22 @@
               <li>
                 <a class="c-dropdown__link" href="./service-blueprint.html">
                   <p class="c-dropdown__title">The Riverbank Blueprint<sup>TM</sup></p>
-                  <p class="c-dropdown__description">A one-time strategic financial plan that gives you clear direction and a personalized roadmap.</p>
+                  <p class="c-dropdown__description">A one-time strategic financial plan that gives you clear direction
+                    and a personalized roadmap.</p>
                 </a>
               </li>
               <li>
                 <a class="c-dropdown__link" href="./service-partnership.html">
                   <p class="c-dropdown__title">Stewardship Partnership</p>
-                  <p class="c-dropdown__description">An ongoing advisory partnership offering continuous guidance and holistic financial management.</p>
+                  <p class="c-dropdown__description">An ongoing advisory partnership offering continuous guidance and
+                    holistic financial management.</p>
                 </a>
               </li>
               <li>
                 <a class="c-dropdown__link" href="./service-education.html">
                   <p class="c-dropdown__title">Education & Strategic Programs</p>
-                  <p class="c-dropdown__description">Workshops for teams and communities focused on essential financial skills.</p>
+                  <p class="c-dropdown__description">Workshops for teams and communities focused on essential financial
+                    skills.</p>
                 </a>
               </li>
             </ul>
@@ -68,6 +71,35 @@
 
       <!-- ================== MOBILE NAVIGATION ================== -->
       <nav class="c-nav-mobile l-container" id="c-nav-mobile">
+
+        <div class="c-nav-mobile-menu-ham">
+          <div class="c-menu-hamburger" id="c-menu-hamburger">
+            <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger__button">
+              <span class="c-hamburger-line"></span>
+              <span class="c-hamburger-line"></span>
+              <span class="c-hamburger-line"></span>
+            </button>
+          </div>
+
+          <a class="c-logo" href="./index.html">
+            <img class="c-logo__img" src="./icons/icon-logo-white.svg" alt="RiverBank Logo">
+          </a>
+          <div class="c-header-actions">
+
+            <button class="c-icon-button">
+              <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+            </button>
+
+            <span class="divisor"></span>
+
+            <button class="c-icon-button">
+              <img src="./icons/icon-shopping-bag.svg" alt="Icon shopping bag RiverBank Store">
+              <!-- Aparecer solo cuando hay productos en el carrito -->
+              <span class="badge">30</span>
+            </button>
+
+          </div>
+        </div>
         <ul class="c-nav-mobile__list">
           <li class="c-nav__item"><a class="c-nav__link c-nav__link--active" href="./index.html">Home</a></li>
           <li class="c-nav__item"><a class="c-nav__link" href="./about-us.html">About Us</a></li>
@@ -148,16 +180,19 @@
     <div class="b-service-hero__content l-container">
       <div class="b-service-hero__card">
         <h1 class="b-service-hero__title">Stewardship Partnership</h1>
-        <p class="b-service-hero__subtitle">Ongoing guidance for clients who value continuity, accountability, and informed decision-making.</p>
-        <p class="b-service-hero__subtitle">The Stewardship Partnership is a high-touch, ongoing advisory relationship designed for clients who want consistent support as their financial lives evolve.</p>
+        <p class="b-service-hero__subtitle">Ongoing guidance for clients who value continuity, accountability, and
+          informed decision-making.</p>
+        <p class="b-service-hero__subtitle">The Stewardship Partnership is a high-touch, ongoing advisory relationship
+          designed for clients who want consistent support as their financial lives evolve.</p>
         <a class="c-button-sm c-button--gold" href="#">Schedule a Stewardship Conversation</a>
       </div>
     </div>
   </section>
-  
+
   <!-- ================== QUOTE SECTION ================== -->
   <section class="b-service-quote">
-    <p class="b-service-quote__text">The Stewardship Partnership is a high-touch, ongoing advisory relationship designed for clients who want consistent support as their financial lives evolve.</p>
+    <p class="b-service-quote__text">The Stewardship Partnership is a high-touch, ongoing advisory relationship designed
+      for clients who want consistent support as their financial lives evolve.</p>
   </section>
 
   <!-- ================== WHAT SECTION ================== -->
@@ -177,13 +212,16 @@
       </article>
 
       <article class="b-service-what__list">
-        <p class="subtitle-2 text-blue-600 mb-6 ">This relationship is designed to support long-term resilience, not short-term optimization.</p>
-        <h3 class="title-5 text-white fw-regular">All Riverbank services are designed using the RIVER Method™ and applied through the Financial Resilience Framework. Engagements are distinct. Participation in one does not imply transition to another.</h3>
+        <p class="subtitle-2 text-blue-600 mb-6 ">This relationship is designed to support long-term resilience, not
+          short-term optimization.</p>
+        <h3 class="title-5 text-white fw-regular">All Riverbank services are designed using the RIVER Method™ and
+          applied through the Financial Resilience Framework. Engagements are distinct. Participation in one does not
+          imply transition to another.</h3>
       </article>
 
     </div>
   </section>
-  
+
   <!-- ================== ENGAGEMENT STRUCTURE SECTION ================== -->
   <section class="b-service-receive l-container">
     <h2 class="b-service-receive__title">Engagement Structure</h2>
@@ -258,18 +296,21 @@
           <h2 class="c-footer-links__title">RiverBank Planning</h2>
           <p class="c-footer-links__subtitle">Sign up to receive top posts from the week — from product announcements to
             everyday tips.</p>
-            
-            <div class="c-footer-social-media">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="c-footer-social-media__link">
-                <img src="./icons/icon-facebook.svg" alt="Icon Facebook RiverBank Planning">
-              </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="c-footer-social-media__link">
-                <img src="./icons/icon-linkedin.svg" alt="Icon LinkedIn RiverBank Planning">
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="c-footer-social-media__link">
-                <img src="./icons/icon-instagram.svg" alt="Icon Instagram RiverBank Planning">
-              </a>
-            </div>
+
+          <div class="c-footer-social-media">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+              class="c-footer-social-media__link">
+              <img src="./icons/icon-facebook.svg" alt="Icon Facebook RiverBank Planning">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+              class="c-footer-social-media__link">
+              <img src="./icons/icon-linkedin.svg" alt="Icon LinkedIn RiverBank Planning">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+              class="c-footer-social-media__link">
+              <img src="./icons/icon-instagram.svg" alt="Icon Instagram RiverBank Planning">
+            </a>
+          </div>
         </div>
 
         <!-- Links List -->

@@ -124,10 +124,12 @@
 
     &:hover {
       background-color: color-mix(in srgb, var(--color-primary) 70%, black 30%);
-      .c-dropdown__title{
+
+      .c-dropdown__title {
         color: var(--color-secondary);
       }
-      .c-dropdown__description{
+
+      .c-dropdown__description {
         color: var(--color-secondary);
       }
     }
@@ -156,7 +158,7 @@
   left: -100%;
   transition: left 0.3s ease;
   width: 100%;
-  height: calc(100vh - 10rem);
+  height: 100vh;
   z-index: 10;
   overflow-y: scroll;
   display: none;
@@ -187,6 +189,30 @@
 
   &::-webkit-scrollbar-button {
     display: none;
+  }
+
+  .c-nav-mobile-menu-ham {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+
+    .c-menu-hamburger__button{
+      .c-hamburger-line:nth-child(1) {
+        transform: translateY(0.8rem) rotate(45deg);
+      }
+
+      .c-hamburger-line:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      .c-hamburger-line:nth-child(3) {
+        transform: translateY(-0.8rem) rotate(-45deg);
+      }
+    }
+
   }
 
 

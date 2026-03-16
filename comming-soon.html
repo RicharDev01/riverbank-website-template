@@ -14,8 +14,8 @@
   <header class="l-header">
     <section class="l-header__inner l-container l-grid">
 
-      <div class="c-menu-hamburger" id="c-menu-hamburger">
-        <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger__button">
+      <div class="c-menu-hamburger" id="c-menu-hamburger-mobile">
+        <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger-mobile__button">
           <span class="c-hamburger-line"></span>
           <span class="c-hamburger-line"></span>
           <span class="c-hamburger-line"></span>
@@ -42,19 +42,22 @@
               <li>
                 <a class="c-dropdown__link" href="./service-blueprint.html">
                   <p class="c-dropdown__title">The Riverbank Blueprint<sup>TM</sup></p>
-                  <p class="c-dropdown__description">A one-time strategic financial plan that gives you clear direction and a personalized roadmap.</p>
+                  <p class="c-dropdown__description">A one-time strategic financial plan that gives you clear direction
+                    and a personalized roadmap.</p>
                 </a>
               </li>
               <li>
                 <a class="c-dropdown__link" href="./service-partnership.html">
                   <p class="c-dropdown__title">Stewardship Partnership</p>
-                  <p class="c-dropdown__description">An ongoing advisory partnership offering continuous guidance and holistic financial management.</p>
+                  <p class="c-dropdown__description">An ongoing advisory partnership offering continuous guidance and
+                    holistic financial management.</p>
                 </a>
               </li>
               <li>
                 <a class="c-dropdown__link" href="./service-education.html">
                   <p class="c-dropdown__title">Education & Strategic Programs</p>
-                  <p class="c-dropdown__description">Workshops for teams and communities focused on essential financial skills.</p>
+                  <p class="c-dropdown__description">Workshops for teams and communities focused on essential financial
+                    skills.</p>
                 </a>
               </li>
             </ul>
@@ -68,6 +71,35 @@
 
       <!-- ================== MOBILE NAVIGATION ================== -->
       <nav class="c-nav-mobile l-container" id="c-nav-mobile">
+
+        <div class="c-nav-mobile-menu-ham">
+          <div class="c-menu-hamburger" id="c-menu-hamburger">
+            <button class="c-icon-button c-menu-hamburger__button" aria-label="Menu" id="c-menu-hamburger__button">
+              <span class="c-hamburger-line"></span>
+              <span class="c-hamburger-line"></span>
+              <span class="c-hamburger-line"></span>
+            </button>
+          </div>
+
+          <a class="c-logo" href="./index.html">
+            <img class="c-logo__img" src="./icons/icon-logo-white.svg" alt="RiverBank Logo">
+          </a>
+          <div class="c-header-actions">
+
+            <button class="c-icon-button">
+              <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+            </button>
+
+            <span class="divisor"></span>
+
+            <button class="c-icon-button">
+              <img src="./icons/icon-shopping-bag.svg" alt="Icon shopping bag RiverBank Store">
+              <!-- Aparecer solo cuando hay productos en el carrito -->
+              <span class="badge">30</span>
+            </button>
+
+          </div>
+        </div>
         <ul class="c-nav-mobile__list">
           <li class="c-nav__item"><a class="c-nav__link c-nav__link--active" href="./index.html">Home</a></li>
           <li class="c-nav__item"><a class="c-nav__link" href="./about-us.html">About Us</a></li>
@@ -148,7 +180,7 @@
       <a class="c-button-sm c-button--gold b-error__cta" href="./index.html">Go Home</a>
     </div>
   </section>
-  
+
   <!-- ================== FOOTER SECTION ================== -->
   <footer class="l-footer">
     <div class="l-footer-box l-container l-grid">
@@ -178,18 +210,21 @@
           <h2 class="c-footer-links__title">RiverBank Planning</h2>
           <p class="c-footer-links__subtitle">Sign up to receive top posts from the week — from product announcements to
             everyday tips.</p>
-            
-            <div class="c-footer-social-media">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="c-footer-social-media__link">
-                <img src="./icons/icon-facebook.svg" alt="Icon Facebook RiverBank Planning">
-              </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="c-footer-social-media__link">
-                <img src="./icons/icon-linkedin.svg" alt="Icon LinkedIn RiverBank Planning">
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="c-footer-social-media__link">
-                <img src="./icons/icon-instagram.svg" alt="Icon Instagram RiverBank Planning">
-              </a>
-            </div>
+
+          <div class="c-footer-social-media">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+              class="c-footer-social-media__link">
+              <img src="./icons/icon-facebook.svg" alt="Icon Facebook RiverBank Planning">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+              class="c-footer-social-media__link">
+              <img src="./icons/icon-linkedin.svg" alt="Icon LinkedIn RiverBank Planning">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+              class="c-footer-social-media__link">
+              <img src="./icons/icon-instagram.svg" alt="Icon Instagram RiverBank Planning">
+            </a>
+          </div>
         </div>
 
         <!-- Links List -->

@@ -1,14 +1,32 @@
 const d = document
 
 // ===== Hamburger Menu Toggle =====
-const btnHamburger = d.getElementById('c-menu-hamburger'); // contenedor del btn hamburguesa
+const nav = d.getElementById('c-nav-mobile');
+const btnHamburgerDesktop = d.getElementById('c-menu-hamburger');
+const btnHamburgerMobile = d.getElementById('c-menu-hamburger-mobile');
+const btnHamburgerMobileButton = d.getElementById('c-menu-hamburger-mobile__button');
 
-btnHamburger.addEventListener('click', function() {
-  const nav = d.getElementById('c-nav-mobile');
-  const animationsHamburger = d.getElementById('c-menu-hamburger__button') // botton del btn hamburguesa
-  animationsHamburger.classList.toggle('is-active');
-  nav.style.left = nav.style.left === '0px' ? '-100%' : '0px';
-});
+const setNavState = (isOpen) => {
+  if (!nav) return;
+  nav.style.left = isOpen ? '0px' : '-100%';
+  if (btnHamburgerMobileButton) {
+    btnHamburgerMobileButton.classList.toggle('is-active', isOpen);
+  }
+};
+
+const toggleNav = () => {
+  if (!nav) return;
+  const isOpen = nav.style.left === '0px';
+  setNavState(!isOpen);
+};
+
+if (btnHamburgerDesktop) {
+  btnHamburgerDesktop.addEventListener('click', toggleNav);
+}
+
+if (btnHamburgerMobile) {
+  btnHamburgerMobile.addEventListener('click', toggleNav);
+}
 
 // ===== Mobile Dropdown Toggle =====
 const dropdownTrigger = d.getElementById('c-nav__link--services');
