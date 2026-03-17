@@ -1,6 +1,6 @@
 @use "../config/mixins";
 
-.c-contact-form {
+.wpcf7-form {
 	display: grid;
 	gap: 1.6rem;
 }
@@ -79,7 +79,7 @@
 	opacity: 0.7;
 }
 
-.c-contact-form__error {
+.wpcf7-not-valid-tipr {
 	min-height: 1.6rem;
 	font-size: var(--font-s-12);
 	line-height: var(--line-h-16);
