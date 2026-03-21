@@ -26,6 +26,7 @@
 }
 
 .c-contact-form__input {
+	width: 100%;
 	border: 0.1rem solid rgba(219, 220, 226, 0.45);
 	background-color: transparent;
 	color: var(--color-white);
@@ -79,7 +80,7 @@
 	opacity: 0.7;
 }
 
-.wpcf7-not-valid-tipr {
+.wpcf7-not-valid-tip {
 	min-height: 1.6rem;
 	font-size: var(--font-s-12);
 	line-height: var(--line-h-16);

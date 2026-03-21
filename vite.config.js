@@ -5,6 +5,7 @@ import { resolve } from "path";
 export default defineConfig({
   base: "./",
   build: {
+    cssCodeSplit: false,
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
@@ -18,6 +19,17 @@ export default defineConfig({
         notFound: resolve(__dirname, "404.html"),
         serverError: resolve(__dirname, "500.html"),
         commingSoon: resolve(__dirname, "comming-soon.html"),
+      },
+      output: {
+        entryFileNames: "main-script.js",
+        chunkFileNames: "assets/[name]-[hash].js",
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith(".css")) {
+            return "assets/main-style.css";
+          }
+
+          return "assets/[name]-[hash][extname]";
+        },
       },
     },
   },
