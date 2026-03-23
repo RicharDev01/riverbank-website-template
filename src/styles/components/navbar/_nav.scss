@@ -151,8 +151,7 @@
    ========================================= */
 
 .c-nav-mobile {
-
-  background-color: var(--color-primary);
+  background-color: var(--mobile-nav-bg);
   position: fixed;
   bottom: 0;
   left: -100%;
@@ -170,7 +169,7 @@
   // Scrollbar styles for WebKit browsers
   scrollbar-width: thin;
   /* Firefox */
-  scrollbar-color: var(--color-blue-600) transparent;
+  scrollbar-color: var(--mobile-nav-border) transparent;
 
   &::-webkit-scrollbar {
     width: 10px;
@@ -181,7 +180,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--color-blue-600);
+    background-color: var(--mobile-nav-border);
     border-radius: 10px;
     border: 3px solid transparent;
     background-clip: content-box;
@@ -225,13 +224,13 @@
   .c-nav__link {
     display: block;
     font-size: var(--font-s-20); // 20px
-    color: var(--color-blue-600);
+    color: var(--mobile-nav-text);
     padding: 3.6rem 0; // 36px
-    border-bottom: 0.1rem solid var(--color-blue-700);
+    border-bottom: 0.1rem solid var(--mobile-nav-border);
     text-decoration: none;
 
     &:hover {
-      color: var(--color-white);
+      color: var(--mobile-nav-text-hover);
     }
 
   }
@@ -276,20 +275,20 @@
     .c-dropdown__link {
       display: block;
       font-size: var(--font-s-14); // 14px
-      color: var(--color-blue-500);
+      color: var(--mobile-nav-subtext);
       padding: 2.4rem 0; // 24px
-      border-bottom: 1px solid var(--color-blue-600);
+      border-bottom: 1px solid var(--mobile-nav-border);
       text-decoration: none;
 
       &:hover {
-        color: var(--color-white);
+        color: var(--mobile-nav-subtext-hover);
       }
 
       .drop-mobile-link__title {
         font-size: var(--font-s-16); // 16px
         margin-bottom: 1rem;
         font-weight: var(--font-w-semibold);
-        color: var(--color-white);
+        color: var(--mobile-nav-title);
       }
 
       .drop-mobile-link__description {
@@ -312,12 +311,12 @@
     gap: 1.2rem;
     padding-left: 2rem;
     // margin: 0 2rem;
-    background-color: color-mix(in srgb, var(--color-primary) 90%, black 10%);
+    background-color: var(--mobile-nav-search-bg);
     border-radius: var(--space-sm);
-    border: 0.1rem solid var(--color-blue-700);
+    border: 0.1rem solid var(--mobile-nav-border);
 
     &:focus-within {
-      background-color: color-mix(in srgb, var(--color-primary) 80%, black 20%);
+      background-color: var(--mobile-nav-search-bg-focus);
     }
 
     .c-icon-button--search-mobile {
@@ -342,11 +341,11 @@
       height: 100%;
       font-size: var(--font-s-16);
       background-color: transparent;
-      color: var(--color-white);
+      color: var(--mobile-nav-input);
       border: none;
 
       &::placeholder {
-        color: var(--color-blue-600);
+        color: var(--mobile-nav-search-placeholder);
       }
 
       &:focus {
