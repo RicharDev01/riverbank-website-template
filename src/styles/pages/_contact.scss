@@ -4,7 +4,8 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 	gap: 6rem;
-	margin-top: 8rem;
+	margin-top: -10rem;
+	padding-top: 18rem;
 	margin-bottom: 8rem;
 	align-items: center;
 }
@@ -31,7 +32,7 @@
 
 .b-faq {
 	margin-top: 6rem;
-	margin-bottom: 8rem;
+	padding-bottom: 8rem;
 }
 
 .b-faq__title {

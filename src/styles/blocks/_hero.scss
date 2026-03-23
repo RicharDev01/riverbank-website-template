@@ -6,7 +6,8 @@
 /* ====================== ========= ====================== */
 .b-hero-container {
   position: relative;
-  min-height: calc(95vh - 10rem);
+  min-height: 95vh;
+  margin-top: -10rem;
 
   // Para tables de apple
   @media screen and (max-width: 1024px) and (min-height: 1100px) {
@@ -22,7 +23,7 @@
 
 .b-hero__content {
   //  padding 
-  --gap-padding-hero: 10rem;
+  --gap-padding-hero: 20rem;
   position: relative;
   z-index: 1;
   padding-top: var(--gap-padding-hero);
@@ -30,11 +31,11 @@
 
   // para pantallas menores a 1024px, el grid se adapta a una sola columna y el padding-top se reduce a 5rem
   @include mixins.break(large) {
-    --gap-padding-hero: 6rem;
+    --gap-padding-hero: 15rem;
   }
 
   @include mixins.break(small) {
-    --gap-padding-hero: 2rem;
+    --gap-padding-hero: 10rem;
   }
 
 }
@@ -155,7 +156,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  z-index: -1;
+  z-index: 5;
 }
 .b-hero-about__content {
   width: 50%;

@@ -46,6 +46,9 @@ html::-webkit-scrollbar-thumb {
   border: 3px solid transparent;
 }
 
+html, body {
+  overflow-x: hidden;
+}
 
 /* Sections
    ========================================================================== */

@@ -1,7 +1,32 @@
 
 @use '../config/mixins';
 
+.l-header {
+  --header-text-color: var(--color-text-light);
+  --header-muted-color: var(--color-blue-600);
+  --header-hover-color: var(--color-white);
+  --header-divider-color: var(--color-blue-700);
+  --header-hamburger-color: var(--color-white);
+  --header-icon-filter: none;
+
+  &.is-on-light {
+    --header-text-color: var(--color-text-dark);
+    --header-muted-color: var(--color-blue-800);
+    --header-hover-color: var(--color-text-dark);
+    --header-divider-color: var(--color-blue-700);
+    --header-hamburger-color: var(--color-text-dark);
+    --header-icon-filter: invert(1);
+  }
+
+  .c-icon-button img,
+  .c-icon-dropdown img {
+    filter: var(--header-icon-filter);
+  }
+}
+
 .l-header__inner {
+  position: relative;
+  z-index: 10;
   height: 10rem;
   max-height: 10rem;
 
@@ -34,7 +59,7 @@
 .divisor {
   width: 1px;
   height: 3rem;
-  background-color: var(--color-blue-700);
+  background-color: var(--header-divider-color);
   margin: 0 var(--space-lg);
   display: inline-block;
 }
@@ -72,7 +97,7 @@
 .c-hamburger-line {
   width: 2.4rem;
   height: 0.2rem;
-  background-color: var(--color-white);
+  background-color: var(--header-hamburger-color);
   border-radius: 2px;
   transition: transform 0.3s ease;
   transform-origin: center;
