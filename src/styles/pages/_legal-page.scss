@@ -1,0 +1,31 @@
+.content-legal {
+
+  padding-bottom: 10rem;
+
+  .legal-title{
+    margin-bottom: 3rem;
+
+    h1.title-1 {
+      margin-bottom: 1rem;
+    }
+
+    .date-modified p {
+      font-size: var(--font-s-20);
+      color: var(--color-blue-700);
+    }
+
+  }
+
+  .legal-paragraph {
+    margin-bottom: 1rem;
+    font-size: var(--font-s-16);
+    line-height: var(--line-h-24);
+  }
+
+  h2.legal-subtitle {
+    margin-bottom: 1rem;
+    font-size: var(--font-s-20);
+    
+  }
+
+}

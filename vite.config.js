@@ -19,6 +19,12 @@ export default defineConfig({
         notFound: resolve(__dirname, "404.html"),
         serverError: resolve(__dirname, "500.html"),
         commingSoon: resolve(__dirname, "comming-soon.html"),
+        // legales
+        intellectualProperty: resolve(__dirname, "intellectual-property.html"),
+        shippingDeliveryPolicy: resolve(__dirname, "shipping-delivery-policy.html"),
+        termsConditions: resolve(__dirname, "terms-conditions.html"),
+        privacyNotice: resolve(__dirname, "privacy-notice.html"),
+        accessibilityStatement: resolve(__dirname, "accessibility-statement.html"),
       },
       output: {
         entryFileNames: "main-script.js",
