@@ -27,11 +27,11 @@ export default defineConfig({
         accessibilityStatement: resolve(__dirname, "accessibility-statement.html"),
       },
       output: {
-        entryFileNames: "main-script.js",
+        entryFileNames: "main-theme.js",
         chunkFileNames: "assets/[name]-[hash].js",
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith(".css")) {
-            return "assets/main-style.css";
+            return "assets/main-theme.css";
           }
 
           return "assets/[name]-[hash][extname]";
