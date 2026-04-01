@@ -48,7 +48,7 @@
     left: 0;
     right: 0;
     height: 2rem;
-    z-index: 99;
+    z-index: var(--z-index-dropdown);
   }
 
   .c-icon-dropdown {
@@ -79,7 +79,7 @@
   list-style: none;
   padding: 1.2rem;
   margin-top: 0.5rem;
-  z-index: 100;
+  z-index: var(--z-index-dropdown);
 
   // Oculto por defecto - SIN transición para evitar animación al cargar
   opacity: 0;
@@ -158,12 +158,13 @@
   transition: left 0.3s ease;
   width: 100%;
   height: 100vh;
-  z-index: 10;
+  z-index: var(--z-index-mobile-nav);
   overflow-y: scroll;
   display: none;
 
   @include mixins.break(large) {
     display: block;
+    top: 0;
   }
 
   // Scrollbar styles for WebKit browsers

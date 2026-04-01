@@ -86,7 +86,7 @@
           </a>
           <div class="c-header-actions">
 
-            <button class="c-icon-button">
+            <button class="c-icon-button" data-open-search-modal aria-haspopup="dialog" aria-controls="search-modal-dialog">
               <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
             </button>
 
@@ -152,19 +152,24 @@
         </ul>
       </nav>
 
+      <!-- ============================================================================ -->
+      <!-- Esto no estará en páginas principales, solo en blog, tools, learning y store -->
+      <!-- ============================================================================ -->
+
       <div class="c-header-actions">
 
-        <button class="c-icon-button">
+        <!-- Boton que abrira search-modal -->
+        <button class="c-icon-button" data-open-search-modal aria-haspopup="dialog" aria-controls="search-modal-dialog">
           <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
         </button>
 
-        <span class="divisor"></span>
+        <!-- <span class="divisor"></span>
 
         <button class="c-icon-button">
           <img src="./icons/icon-shopping-bag.svg" alt="Icon shopping bag RiverBank Store">
-          <!-- Aparecer solo cuando hay productos en el carrito -->
+          !-- Aparecer solo cuando hay productos en el carrito --
           <span class="badge">30</span>
-        </button>
+        </button> -->
 
       </div>
 
@@ -433,36 +438,28 @@
 
         <!-- Links List -->
         <nav class="c-footer-links-nav l-grid">
-          <!-- Resources -->
+          <!-- Navigation -->
           <ul class="c-footer-links-list">
-            <li><a class="c-footer-links-link c-footer-links-link--title">Resources</a></li>
-            <li><a class="c-footer-links-link">Financial Guides</a></li>
-            <li><a class="c-footer-links-link">Planning Templates</a></li>
-            <li><a class="c-footer-links-link">Educational Videos</a></li>
-            <li><a class="c-footer-links-link">Webinars</a></li>
+            <li><a class="c-footer-links-link c-footer-links-link--title">Navigation</a></li>
+            <li><a class="c-footer-links-link">Method</a></li>
+            <li><a class="c-footer-links-link">Services</a></li>
+            <li><a class="c-footer-links-link">Thought Capital</a></li>
+            <li><a class="c-footer-links-link">Tools</a></li>
           </ul>
-          <!-- Outreach & Initiatives -->
+          <!-- Company -->
           <ul class="c-footer-links-list">
-            <li><a class="c-footer-links-link c-footer-links-link--title">Outreach & Initiatives</a></li>
-            <li><a class="c-footer-links-link">Community Programs</a></li>
-            <li><a class="c-footer-links-link">Partnerships</a></li>
-            <li><a class="c-footer-links-link">Events</a></li>
-            <li><a class="c-footer-links-link">Newsletter Archive</a></li>
-          </ul>
-          <!-- More about us -->
-          <ul class="c-footer-links-list">
-            <li><a class="c-footer-links-link c-footer-links-link--title">More About Us</a></li>
-            <li><a class="c-footer-links-link">Our Story</a></li>
-            <li><a class="c-footer-links-link">Team</a></li>
+            <li><a class="c-footer-links-link c-footer-links-link--title">Company</a></li>
+            <li><a class="c-footer-links-link">About us</a></li>
+            <li><a class="c-footer-links-link">Who We Serve</a></li>
             <li><a class="c-footer-links-link">Contact</a></li>
           </ul>
           <!-- Legal -->
           <ul class="c-footer-links-list">
             <li><a class="c-footer-links-link c-footer-links-link--title">Legal</a></li>
-            <li><a class="c-footer-links-link">Privacy Notice</a></li>
+            <li><a class="c-footer-links-link">Privacy</a></li>
             <li><a class="c-footer-links-link">Terms & Conditions</a></li>
             <li><a class="c-footer-links-link">Accessibility Statement</a></li>
-            <li><a class="c-footer-links-link">Intellectual Property & Content Use Policy</a></li>
+            <li><a class="c-footer-links-link">Intellectual Property</a></li>
             <li><a class="c-footer-links-link">Shipping & Delivery Policy</a></li>
           </ul>
         </nav>
@@ -479,6 +476,32 @@
   <button class="c-button-up-to-top" id="c-button-up-to-top" aria-label="Back to top">
     <img src="./icons/icon-arrow-dropdown.svg" alt="Icon arrow up RiverBank Planning">
   </button>
+  
+  <!-- ================== ============ ================== -->
+  <!-- ================== Search Modal ================== -->
+  <!-- ================== ============ ================== -->
+  <div class="search-modal" id="search-modal-dialog" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="search-modal__content">
+      <button class="c-icon-button c-icon-button--close-search-modal" id="close-search-modal" aria-label="Close search modal">
+        <img src="/icons/icon-close.svg" alt="Icon close RiverBank Planning">
+      </button>
+      <form action="#" method="post" class="c-search-form-modal">
+        <input type="search" name="search" id="search-modal" class="c-search-form__input c-search-form__input--modal"
+          placeholder="Search..." list="search-suggestions" required>
+        <datalist id="search-suggestions">
+          <option value="Finance"></option>
+          <option value="Method"></option>
+          <option value="Framework"></option>
+        </datalist>
+        <button class="c-icon-button c-icon-button--search-modal" type="submit">
+          <img src="./icons/icon-search.svg" alt="Icon search RiverBank Planning">
+        </button>
+      </form>
+      <p class="search-modal__hint">Use Up/Down to navigate, Enter to select, Esc to close.</p>
+    </div>
+  </div>
+
+
 
 
   <script type="module" src="/src/main.js"></script>

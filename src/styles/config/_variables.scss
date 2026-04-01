@@ -132,4 +132,20 @@
   --color-text-dark: var(--color-primary);
   --color-text-light: var(--color-white);
 
+  /* ==== Z-INDEX ==== */
+  --z-index-modal: 110;
+  --z-index-header: 100;
+  --z-index-dropdown: 90;
+  --z-index-mobile-nav: var(--z-index-modal);
+
+
+  --z-index-10: 10;
+  --z-index-5: 5;
+  --z-index-1: 1;
+  --z-index-0: 0;
+  --z-index-negative: -1;
+
+  /* ==== Header Height ==== */
+  --header-height: 10rem;
+
 }

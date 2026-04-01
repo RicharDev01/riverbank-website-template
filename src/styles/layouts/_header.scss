@@ -2,6 +2,14 @@
 @use '../config/mixins';
 
 .l-header {
+
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  background: transparent;
+  z-index: var(--z-index-header);
+
+
   --header-text-color: var(--color-text-light);
   --header-muted-color: var(--color-blue-600);
   --header-hover-color: var(--color-white);
@@ -44,11 +52,16 @@
   .c-icon-dropdown img {
     filter: var(--header-icon-filter);
   }
+
+  @include mixins.break(large) {
+    // display: none;
+  }
+
 }
 
 .l-header__inner {
   position: relative;
-  z-index: 10;
+  z-index: var(--z-index-10) ;
   height: 10rem;
   max-height: 10rem;
 

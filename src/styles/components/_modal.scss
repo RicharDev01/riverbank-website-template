@@ -1,0 +1,95 @@
+@use "../config/mixins";
+
+.is-modal-open {
+	overflow: hidden;
+}
+
+.search-modal {
+	position: fixed;
+	inset: 0;
+	z-index: var(--z-index-modal);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 5.5rem 1.5rem 2.5rem;
+	background: rgba(12, 20, 38, 0.72);
+	backdrop-filter: blur(10px);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.search-modal.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.search-modal__content {
+	position: relative;
+	width: min(860px, 100%);
+	border-radius: 1.4rem;
+	padding: 2.5rem 2.5rem 2rem;
+	background: linear-gradient(180deg, rgba(32, 49, 90, 0.92), rgba(23, 36, 66, 0.96));
+	border: 0.1rem solid rgba(255, 255, 255, 0.08);
+	box-shadow: 0 2.8rem 8rem rgba(21, 49, 128, 0.55);
+	color: var(--color-white);
+}
+
+.c-icon-button--close-search-modal {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.c-search-form-modal {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.75rem 1rem;
+	border-radius: 1.2rem;
+	border: 0.1rem solid rgba(255, 255, 255, 0.16);
+	background: rgba(12, 19, 38, 0.45);
+}
+
+.c-search-form__input--modal {
+	flex: 1;
+	min-width: 0;
+	border: none;
+	outline: none;
+	background: transparent;
+	color: var(--color-white);
+	font-size: var(--font-s-16);
+	line-height: 1.4;
+}
+
+.c-search-form__input--modal::placeholder {
+	color: rgba(238, 243, 251, 0.6);
+	font-size: var(--font-s-16);
+}
+
+.c-icon-button--search-modal {
+	border-radius: 10px;
+	padding: 0.4rem;
+	background: rgba(255, 255, 255, 0.06);
+}
+
+.search-modal__hint {
+	margin: 1rem 0 2rem;
+	color: var(--color-blue-700);
+	font-size: var(--font-s-14);
+}
+
+
+@include mixins.break(medium) {
+  .search-modal {
+		padding: 4.5rem 1rem 2rem;
+    align-items: center;
+	}
+
+	.search-modal__content {
+		padding: 2rem 1.5rem 1.5rem;
+    height: 50vh;
+	}
+}

@@ -6,7 +6,6 @@
 	position: relative;
 	min-height: 40rem;
 	padding: 20rem 0;
-	margin-top: -10rem;
 }
 
 .b-service-hero__media {
@@ -54,7 +53,7 @@
 			hsla(208, 81%, 23%, 0.411) 60%,
 			transparent 75%,
 			transparent 100%);
-	z-index: -1;
+	z-index: var(--z-index-negative);
 }
 
 .b-service-hero__title {
@@ -202,7 +201,7 @@
 		margin-right: 1rem;
 		background-color: var(--color-blue-500);
 		border-radius: 50%;
-		z-index: -1;
+		z-index: var(--z-index-negative);
 	}
 }
 
@@ -298,7 +297,7 @@
 
 .b-service-alliance__content {
 	position: relative;
-	z-index: 1;
+	z-index: var(--z-index-1);
 	max-width: 64rem;
 }
 
@@ -400,6 +399,11 @@
 }
 
 @include mixins.break(medium) {
+
+	.b-service-hero {
+		padding: 10rem 0;
+	}
+
 	.b-service-hero__content {
 		padding-bottom: 2rem;
 	}

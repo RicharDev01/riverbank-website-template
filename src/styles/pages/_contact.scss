@@ -4,8 +4,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 	gap: 6rem;
-	margin-top: -10rem;
-	padding-top: 18rem;
+	padding-top: 8rem;
 	margin-bottom: 8rem;
 	align-items: center;
 }
@@ -145,15 +144,5 @@
 		font-size: var(--font-s-16);
 		line-height: var(--line-h-24);
 		padding: 2rem 0;
-	}
-}
-
-@include mixins.break(small) {
-	.b-contact {
-		margin-top: 6rem;
-	}
-
-	.b-faq {
-		margin-bottom: 6rem;
 	}
 }
