@@ -6,7 +6,7 @@
   position: fixed;
   width: 100%;
   backdrop-filter: blur(20px);
-  background: transparent;
+  background-color: rgba($color: #0B3F6B, $alpha: 0.6);
   z-index: var(--z-index-header);
 
 
@@ -29,6 +29,7 @@
   --mobile-nav-input: var(--color-white);
 
   &.is-on-light {
+    background-color: rgba($color: #ffffff, $alpha: 0.7);
     --header-text-color: var(--color-text-dark);
     --header-muted-color: var(--color-blue-800);
     --header-hover-color: var(--color-text-dark);

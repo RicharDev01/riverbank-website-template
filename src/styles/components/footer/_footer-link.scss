@@ -103,6 +103,7 @@
   @include mixins.break(small) {
     grid-column: span 3;
     margin-bottom: 3rem;
+    place-items: center;
   }
 }
 
