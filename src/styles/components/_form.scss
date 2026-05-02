@@ -23,6 +23,7 @@
 	color: var(--color-blue-600);
 	text-transform: uppercase;
 	pointer-events: none;
+	z-index: var(--z-index-1);
 }
 
 .c-contact-form__input {
@@ -71,13 +72,11 @@
 .c-contact-form__icons {
 	display: flex;
 	gap: 1.6rem;
-	margin-top: 0.6rem;
 }
 
 .c-contact-form__icon {
-	width: 2.4rem;
-	height: 2.4rem;
-	opacity: 0.7;
+	width: 6rem;
+	height: 6rem;
 }
 
 .wpcf7-not-valid-tip {
